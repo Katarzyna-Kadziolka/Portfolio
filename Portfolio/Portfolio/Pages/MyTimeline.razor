@@ -1,0 +1,27 @@
+﻿@using BlazorTimeline
+@page "/Timeline"
+
+<Timeline
+    Title="My timeline"
+    TitleBgColor="#554DE0"
+    TitleColor="#FFFFFF"
+    TextColor="#F3F3F3"
+    TextBgColor="#212121"
+    ItemPositionOption="@ItemPositionOption.AutoAltering">
+    
+    <TimelineItem Title="OEC Internship" Time="01.07.2021 -" ButtonText="Github" Link="https://github.com/">
+        Here we can write description :) And even add some buttons!
+    </TimelineItem>
+
+    <TimelineItem Title="Second item">
+        <span>Timeline item can be altered to appear on the right! </span>
+
+        <span>And we can add anything here :)</span> <br/>
+
+        <code>Even some code!</code> <br/>
+
+        <span>Or Images!</span> <br/>
+
+        <img src="Images/kitty.jpg" width="200px"/>
+    </TimelineItem>
+</Timeline>
