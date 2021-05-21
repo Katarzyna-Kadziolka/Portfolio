@@ -1,0 +1,54 @@
+﻿@using Portfolio.Data
+<div class="container mt-3">
+    <div class="row">
+        <div class="col text-center">
+            <h2>@ProjectName</h2>
+            <span id="project-date"><i>@Date</i></span>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col">
+            <img src=@PhotoAddress alt=@PhotoDescription class="img img-fluid">
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12 col-md-6">
+            <h4>Description</h4>
+            <span>
+                @ChildContent
+            </span>
+        </div>
+        <div class="col-12 col-md-6">
+            <h4>Technologies</h4>
+            @foreach (var tech in Techs) {
+                <Technology Type="tech"/>
+            }
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col text-lg-end">
+            GitHub-przycisk
+        </div>
+    </div>
+</div>
+
+@code {
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public string ProjectName { get; set; }
+
+    [Parameter]
+    public string Date { get; set; }
+    
+    [Parameter]
+    public string PhotoAddress { get; set; }
+    
+    [Parameter]
+    public string PhotoDescription { get; set; }
+    
+    [Parameter]
+    public Tech[] Techs { get; set; }
+}
