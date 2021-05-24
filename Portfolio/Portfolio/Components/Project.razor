@@ -3,7 +3,9 @@
     <div class="row">
         <div class="col text-center">
             <h2>@ProjectName</h2>
-            <span id="project-date"><i>@Date</i></span>
+            <span id="project-date">
+                <i>@Date</i>
+            </span>
         </div>
     </div>
     <div class="row mt-2">
@@ -25,9 +27,14 @@
             }
         </div>
     </div>
-    <div class="row mt-3">
+    <div class="row mt-3 mb-5">
         <div class="col text-lg-end">
-            GitHub-przycisk
+            <a href=@GithubAddress target="_blank">
+                <button type="button" class="btn btn-dark">
+                    <object data="Images/github.svg" type="image/svg+xml" class="github-image me-1"></object>
+                    Github
+                </button>
+            </a>
         </div>
     </div>
 </div>
@@ -42,13 +49,17 @@
 
     [Parameter]
     public string Date { get; set; }
-    
+
     [Parameter]
     public string PhotoAddress { get; set; }
-    
+
     [Parameter]
     public string PhotoDescription { get; set; }
-    
+
     [Parameter]
     public Tech[] Techs { get; set; }
+
+    [Parameter]
+    public string GithubAddress { get; set; }
+
 }

@@ -2,6 +2,18 @@
     public enum Tech {
         Wpf,
         AspNet,
-        Csharp
+        Csharp,
+        Blazor,
+        Bootstrap,
+        Css3,
+        DotNet,
+        Git,
+        Html5,
+        Python,
+        RestApi,
+        Rider,
+        UnitTests,
+        VisualStudio,
+        VisualStudioCode
     }
 }
