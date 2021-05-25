@@ -14,6 +14,7 @@
         Rider,
         UnitTests,
         VisualStudio,
-        VisualStudioCode
+        VisualStudioCode,
+        TkInter
     }
 }
