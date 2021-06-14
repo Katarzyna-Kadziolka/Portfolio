@@ -76,6 +76,8 @@ namespace Portfolio.Services {
                     return "Images/Technologies/visualstudiocode.svg";
                 case Tech.TkInter:
                     return "Images/Technologies/wpf.svg";
+                case Tech.Unknown:
+                    throw new ArgumentOutOfRangeException(nameof(tech), tech, null);
                 default:
                     throw new ArgumentOutOfRangeException(nameof(tech), tech, null);
             }

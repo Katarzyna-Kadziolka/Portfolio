@@ -1,20 +1,23 @@
-﻿namespace Portfolio.Data {
+﻿using System.ComponentModel;
+
+namespace Portfolio.Data {
     public enum Tech {
-        Wpf,
-        AspNet,
-        Csharp,
+        Unknown,
+        [Description("WPF")] Wpf,
+        [Description("ASP.NET")] AspNet,
+        [Description("C#")] Csharp,
         Blazor,
         Bootstrap,
-        Css3,
-        DotNet,
+        [Description("CSS")] Css3,
+        [Description(".NET")] DotNet,
         Git,
-        Html5,
+        [Description("HTML")] Html5,
         Python,
-        RestApi,
+        [Description("REST API")] RestApi,
         Rider,
-        UnitTests,
-        VisualStudio,
-        VisualStudioCode,
+        [Description("Unit Tests")] UnitTests,
+        [Description("Visual Studio")] VisualStudio,
+        [Description("Visual Studio Code")] VisualStudioCode,
         TkInter
     }
 }
