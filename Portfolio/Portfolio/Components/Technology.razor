@@ -1,12 +1,12 @@
 ﻿@using Portfolio.Data
 @using Portfolio.Services
 
-<div class="container">
-    <div class="row">
+<div class="container-fluid">
+    <div class="row gx-5">
         <div class="col-1 mb-2">
            <object data=@Type.GetImageAddress() type="image/svg+xml" class="tech-icon"></object>
         </div>
-        <div class="col-11 pt-1">
+        <div class="col-7 pt-1">
            <span>@Type.GetName()</span><br> 
         </div>
     </div>
