@@ -18,6 +18,7 @@ namespace Portfolio.Data {
         [Description("Unit Tests")] UnitTests,
         [Description("Visual Studio")] VisualStudio,
         [Description("Visual Studio Code")] VisualStudioCode,
-        TkInter
+        TkInter,
+        Vue
     }
 }

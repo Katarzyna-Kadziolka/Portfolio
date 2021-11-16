@@ -36,7 +36,9 @@ namespace Portfolio.Services {
                 case Tech.VisualStudioCode:
                     return "Visual Studio Code";
                 case Tech.TkInter:
-                    return"TkInter";
+                    return "TkInter";
+                case Tech.Vue:
+                    return "Vue";
                 default:
                     throw new ArgumentOutOfRangeException(nameof(tech), tech, null);
             }
@@ -76,6 +78,8 @@ namespace Portfolio.Services {
                     return "Images/Technologies/visualstudiocode.svg";
                 case Tech.TkInter:
                     return "Images/Technologies/wpf.svg";
+                case Tech.Vue:
+                    return "Images/Technologies/vue.svg";
                 case Tech.Unknown:
                     throw new ArgumentOutOfRangeException(nameof(tech), tech, null);
                 default:
