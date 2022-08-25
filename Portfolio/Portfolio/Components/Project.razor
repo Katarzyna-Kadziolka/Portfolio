@@ -1,5 +1,5 @@
 ﻿@using Portfolio.Data
-<div class="container mt-3">
+<div class="container mt-3 mb-5">
     <div class="row">
         <div class="col text-center">
             <h2>@ProjectName</h2>
@@ -13,28 +13,34 @@
             <img src=@PhotoAddress alt=@PhotoDescription class="img img-fluid" width=@PhotoWidth>
         </div>
     </div>
-    <div class="row mt-3">
+    <div class="row mt-5">
         <div class="col-12 col-md-6 mb-2">
             <h4>Description</h4>
-            <span>
+            <span class="mt-5">
                 @ChildContent
             </span>
+            <div class="row mt-3 mb-3">
+                <div class="col text-lg-start">
+                    <a href=@GithubAddress target="_blank">
+                        <button type="button" class="btn btn-dark" style="width: 8rem">
+                            <div class="row row-cols-2">
+                                <img src="Images/github.svg" alt="Github" class="github-image"/>
+                                <div class="github-container">
+                                    <span><b>Github</b></span>
+                                </div>
+                            </div>
+                        </button>
+                    </a>
+                </div>
+            </div>
         </div>
         <div class="col-12 col-md-6">
             <h4>Technologies</h4>
-            @foreach (var tech in Techs) {
-                <Technology Type="tech"/>
-            }
-        </div>
-    </div>
-    <div class="row mt-3 mb-3">
-        <div class="col text-lg-end">
-            <a href=@GithubAddress target="_blank">
-                <button type="button" class="btn btn-dark pt-2">
-                    <object data="Images/github.svg" type="image/svg+xml" class="github-image me-1"></object>
-                    Github
-                </button>
-            </a>
+            <div class="tech mt-4">
+                @foreach (var tech in Techs) {
+                    <Technology Type="tech"/>
+                } 
+            </div>
         </div>
     </div>
 </div>

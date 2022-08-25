@@ -20,6 +20,9 @@ namespace Portfolio.Data {
         [Description("Visual Studio Code")] VisualStudioCode,
         TkInter,
         Vue,
-        [Description("Java Script")] Js
+        [Description("Java Script")] Js,
+        [Description("Type Script")] Ts,
+        Docker,
+        Sass,
     }
 }

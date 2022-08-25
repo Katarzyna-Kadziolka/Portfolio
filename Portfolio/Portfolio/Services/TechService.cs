@@ -41,6 +41,12 @@ namespace Portfolio.Services {
                     return "Vue";
                 case Tech.Js:
                     return "Java Script";
+                case Tech.Ts:
+                    return "Tyepe Script";
+                case Tech.Sass:
+                    return "Sass";
+                case Tech.Docker:
+                    return "Docker";
                 default:
                     throw new ArgumentOutOfRangeException(nameof(tech), tech, null);
             }
@@ -84,6 +90,12 @@ namespace Portfolio.Services {
                     return "Images/Technologies/vue.svg";
                 case Tech.Js:
                     return "Images/Technologies/javascript.svg";
+                case Tech.Ts:
+                    return "Images/Technologies/typescript.svg";
+                case Tech.Docker:
+                    return "Images/Technologies/docker.svg";
+                case Tech.Sass:
+                    return "Images/Technologies/sass.svg";
                 case Tech.Unknown:
                     throw new ArgumentOutOfRangeException(nameof(tech), tech, null);
                 default:
