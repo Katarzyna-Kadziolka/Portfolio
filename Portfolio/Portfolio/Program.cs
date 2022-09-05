@@ -3,10 +3,9 @@ using System.Net.Http;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Text;
+using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 
 namespace Portfolio {
 	public class Program {
@@ -17,7 +16,7 @@ namespace Portfolio {
 			});
 
 			builder.RootComponents.Add<App>("#app");
-			
+			builder.RootComponents.Add<HeadOutlet>("head::after");
 			var host = builder.Build();
 
 			await host.RunAsync();
