@@ -24,5 +24,10 @@ namespace Portfolio.Data {
         [Description("Type Script")] Ts,
         Docker,
         Sass,
+        Angular,
+        Quasar,
+        Flutter,
+        Dart,
+        [Description("Android Studio")] AndroidStudio,
     }
 }

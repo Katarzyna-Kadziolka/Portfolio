@@ -47,6 +47,16 @@ namespace Portfolio.Services {
                     return "Sass";
                 case Tech.Docker:
                     return "Docker";
+                case Tech.Angular:
+                    return "Angular";
+                case Tech.Quasar:
+                    return "Quasar";
+                case Tech.Flutter:
+                    return "Flutter";
+                case Tech.Dart:
+                    return "Dart";
+                case Tech.AndroidStudio:
+                    return "Android Studio";
                 default:
                     throw new ArgumentOutOfRangeException(nameof(tech), tech, null);
             }
@@ -96,6 +106,16 @@ namespace Portfolio.Services {
                     return "Images/Technologies/docker.svg";
                 case Tech.Sass:
                     return "Images/Technologies/sass.svg";
+                case Tech.Angular:
+                    return "Images/Technologies/angular.svg";
+                case Tech.Dart:
+                    return "Images/Technologies/dart.svg";
+                case Tech.Flutter:
+                    return "Images/Technologies/flutter.svg";
+                case Tech.Quasar:
+                    return "Images/Technologies/quasar.svg";
+                case Tech.AndroidStudio:
+                    return "Images/Technologies/android.svg";
                 case Tech.Unknown:
                     throw new ArgumentOutOfRangeException(nameof(tech), tech, null);
                 default:
