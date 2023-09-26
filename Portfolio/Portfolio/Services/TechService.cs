@@ -42,7 +42,7 @@ namespace Portfolio.Services {
                 case Tech.Js:
                     return "Java Script";
                 case Tech.Ts:
-                    return "Tyepe Script";
+                    return "Type Script";
                 case Tech.Sass:
                     return "Sass";
                 case Tech.Docker:
