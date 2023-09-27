@@ -12,6 +12,13 @@ export default defineNuxtConfig({
     },
     modules: [
         '@nuxt/content',
+        ['@nuxtjs/google-fonts', {
+            families: {
+                'Nunito': true,
+                download: true,
+                inject: true
+            }
+        }]
     ],
 
 })

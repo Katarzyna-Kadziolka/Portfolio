@@ -9,8 +9,12 @@
   },
   "devDependencies": {
     "@nuxt/content": "^2.8.2",
+    "@nuxtjs/google-fonts": "^3.0.2",
     "nuxt": "^3.7.3",
     "nuxt-storm": "^1.1.3",
     "sass": "^1.68.0"
+  },
+  "dependencies": {
+    "@fontsource/source-sans-pro": "^5.0.8"
   }
 }
