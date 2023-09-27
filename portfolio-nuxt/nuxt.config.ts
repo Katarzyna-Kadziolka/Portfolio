@@ -20,5 +20,9 @@ export default defineNuxtConfig({
             }
         }]
     ],
-
+    app: {
+        head: {
+            title: 'Katarzyna Kądziołka'
+        }
+    }
 })
