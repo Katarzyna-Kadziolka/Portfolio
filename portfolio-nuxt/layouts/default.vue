@@ -12,7 +12,8 @@
 <style scoped lang="scss">
 .default {
   &_container {
-    background: $primary;
+    background: linear-gradient(90deg, $primary, $gradient);
+    height: 56px;
   }
 }
 </style>
