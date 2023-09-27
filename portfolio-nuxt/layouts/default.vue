@@ -12,7 +12,7 @@
 <style scoped lang="scss">
 .default {
   &_container {
-    background: $complementary;
+    background: $primary;
   }
 }
 </style>
