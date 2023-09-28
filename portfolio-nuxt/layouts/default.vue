@@ -1,10 +1,12 @@
 <script setup lang="ts">
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 </script>
 
 <template>
   <div class="default_container">
     <img src="../assets/logo.png" alt="logo" class="default_logo">
     <div class="default_title">Katarzyna Kądziołka</div>
+
   </div>
   <slot />
 </template>
