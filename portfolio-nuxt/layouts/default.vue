@@ -8,12 +8,12 @@ import NavButton from "~/components/layout/NavButton.vue";
     <img src="../assets/logo.png" alt="logo" class="default_logo">
     <div class="default_title">Katarzyna Kądziołka</div>
     <div class="default_buttons">
-      <NavButton label="About me" icon="fa-solid fa-user"/>
-      <NavButton label="Experience" icon="fa-solid fa-briefcase"/>
-      <NavButton label="Projects" icon="fa-solid fa-laptop-code"/>
-      <NavButton label="Achievements" icon="fa-solid fa-star"/>
-      <NavButton label="Certificates" icon="fa-solid fa-book"/>
-      <NavButton label="Time line" icon="fa-solid fa-timeline"/>
+      <NavButton label="About me" icon="fa-solid fa-user" link="/"/>
+      <NavButton label="Experience" icon="fa-solid fa-briefcase" link="/Experience"/>
+      <NavButton label="Projects" icon="fa-solid fa-laptop-code" link="/Projects"/>
+      <NavButton label="Achievements" icon="fa-solid fa-star" link="/Achievements"/>
+      <NavButton label="Certificates" icon="fa-solid fa-book" link="/Certificates"/>
+      <NavButton label="Time line" icon="fa-solid fa-timeline" link="/TimeLine"/>
     </div>
   </div>
   <slot />
