@@ -2,16 +2,21 @@
 import BaseTag from "~/components/common/BaseTag.vue";
 import {Technology} from "~/types/technology";
 
-defineProps<{
+const props = defineProps<{
   title: string,
   description: string,
-  technologies: Technology[]
+  technologies: Technology[],
+  imagePath: string,
 }>()
+
+const imageUrl = new URL(props.imagePath, import.meta.url)
+
+
 </script>
 
 <template>
   <div class="gallery-card_container">
-    <img src="../assets/images/doscvolTools-mini.png" alt="Doscvol tools" class="gallery-card_image">
+    <img :src="imageUrl" :alt="title" class="gallery-card_image">
     <div class="gallery-card_content">
       <span class="gallery-card_title"><b>{{title}}</b></span>
       <span>{{description}}</span>

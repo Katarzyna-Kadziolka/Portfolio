@@ -2,6 +2,7 @@
 import BaseCheckbox from "~/components/common/BaseCheckbox.vue";
 import {Technology} from "~/types/technology";
 import {TechnologyFilter} from "~/types/technologyFilter";
+import {projects} from "~/data/projects"
 
 const filters : TechnologyFilter[] = reactive([
   {
@@ -21,6 +22,7 @@ const filters : TechnologyFilter[] = reactive([
     IsChecked: false
   },
 ]);
+
 </script>
 
 <template>
@@ -30,10 +32,14 @@ const filters : TechnologyFilter[] = reactive([
       <BaseCheckbox v-for="filter in filters" :key="filter" v-model="filter.IsChecked" :label="filter.Technology" class="projects_checkbox" />
     </div>
     <div class="projects_gallery">
-      <GalleryCard title="Doscvol Tools" description="Content generator for RPG game Blades In The Dark" :technologies="[Technology.Vue, Technology.Html, Technology.Scss, Technology.WebStorm, Technology.Csharp]" class="projects_gallery-card"/>
-      <GalleryCard title="Doscvol Tools" description="Content generator for RPG game Blades In The Dark" :technologies="[Technology.Vue, Technology.Html, Technology.Scss, Technology.WebStorm]" class="projects_gallery-card"/>
-      <GalleryCard title="Doscvol Tools" description="Content generator for RPG game Blades In The Dark" :technologies="[Technology.Vue, Technology.Html, Technology.Scss, Technology.WebStorm]" class="projects_gallery-card"/>
-      <GalleryCard title="Doscvol Tools" description="Content generator for RPG game Blades In The Dark" :technologies="[Technology.Vue, Technology.Html, Technology.Scss, Technology.WebStorm]" class="projects_gallery-card"/>
+      <GalleryCard
+          v-for="project in projects"
+          :key="project.Name"
+          :title="project.Name"
+          :description="project.ShortDescription"
+          :technologies="project.Technologies"
+          :image-path="project.MiniImagePath"
+          class="projects_gallery-card"/>
     </div>
   </div>
 </template>
@@ -67,6 +73,7 @@ const filters : TechnologyFilter[] = reactive([
     column-gap: 16px;
     align-items: center;
     width: 30%;
+    flex-wrap: wrap;
   }
 }
 </style>
