@@ -25,16 +25,15 @@ const filters : TechnologyFilter[] = reactive([
 
 <template>
   <div class="projects_container">
-    <span class="projects_title"><b>My projects!</b></span>
     <div class="projects_filters">
       <span><b>Show only:</b> </span>
       <BaseCheckbox v-for="filter in filters" :key="filter" v-model="filter.IsChecked" :label="filter.Technology" class="projects_checkbox" />
     </div>
     <div class="projects_gallery">
-      <GalleryCard class="projects_gallery-card"/>
-      <GalleryCard class="projects_gallery-card"/>
-      <GalleryCard class="projects_gallery-card"/>
-      <GalleryCard class="projects_gallery-card"/>
+      <GalleryCard title="Doscvol Tools" description="Content generator for RPG game Blades In The Dark" :technologies="[Technology.Vue, Technology.Html, Technology.Scss, Technology.WebStorm, Technology.Csharp]" class="projects_gallery-card"/>
+      <GalleryCard title="Doscvol Tools" description="Content generator for RPG game Blades In The Dark" :technologies="[Technology.Vue, Technology.Html, Technology.Scss, Technology.WebStorm]" class="projects_gallery-card"/>
+      <GalleryCard title="Doscvol Tools" description="Content generator for RPG game Blades In The Dark" :technologies="[Technology.Vue, Technology.Html, Technology.Scss, Technology.WebStorm]" class="projects_gallery-card"/>
+      <GalleryCard title="Doscvol Tools" description="Content generator for RPG game Blades In The Dark" :technologies="[Technology.Vue, Technology.Html, Technology.Scss, Technology.WebStorm]" class="projects_gallery-card"/>
     </div>
   </div>
 </template>
@@ -64,10 +63,10 @@ const filters : TechnologyFilter[] = reactive([
     background: $p-accent;
     padding: 8px;
     border-radius: 15px;
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
     width: 30%;
-  }
-  &_checkbox {
-    margin-left: 16px;
   }
 }
 </style>

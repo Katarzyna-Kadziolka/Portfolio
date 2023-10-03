@@ -8,8 +8,10 @@ defineProps<{
 </script>
 
 <template>
-  <input type="checkbox" :checked="modelValue" @change="$emit('update:modelValue', $event.target.checked)"/>
-  <label v-if="label">{{ label }}</label>
+  <div>
+    <input type="checkbox" :checked="modelValue" @change="$emit('update:modelValue', $event.target.checked)"/>
+    <label v-if="label">{{ label }}</label>
+  </div>
 </template>
 
 <style scoped lang="scss">

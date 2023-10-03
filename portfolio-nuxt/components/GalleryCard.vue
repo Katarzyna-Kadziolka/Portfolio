@@ -1,21 +1,23 @@
 <script setup lang="ts">
-
 import BaseTag from "~/components/common/BaseTag.vue";
 import {Technology} from "~/types/technology";
+
+defineProps<{
+  title: string,
+  description: string,
+  technologies: Technology[]
+}>()
 </script>
 
 <template>
   <div class="gallery-card_container">
     <img src="../assets/images/doscvolTools-mini.png" alt="Doscvol tools" class="gallery-card_image">
     <div class="gallery-card_content">
-      <span class="gallery-card_title"><b>Doscvol Tools</b></span>
-      <span>Content generator for RPG game Blades In The Dark</span>
+      <span class="gallery-card_title"><b>{{title}}</b></span>
+      <span>{{description}}</span>
       <hr>
       <div class="gallery-card_tags">
-        <BaseTag :label="Technology.Vue" />
-        <BaseTag :label="Technology.Html" />
-        <BaseTag :label="Technology.Scss" />
-        <BaseTag :label="Technology.WebStorm" />
+        <BaseTag v-for="technology in technologies" :key="technology" :label="technology" />
       </div>
     </div>
   </div>
