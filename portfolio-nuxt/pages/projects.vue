@@ -53,13 +53,14 @@ const filters : TechnologyFilter[] = reactive([
     row-gap: 16px;
   }
   &_gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     row-gap: 40px;
+    column-gap: 16px;
   }
   &_gallery-card {
     width: 30vw;
+    justify-self: center;
   }
   &_title {
     font-size: 1.5rem;

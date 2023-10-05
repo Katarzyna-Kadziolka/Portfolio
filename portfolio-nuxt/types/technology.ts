@@ -27,5 +27,11 @@ export enum Technology {
     Docker = 'Docker',
     Mvc = 'MVC',
     Cqrs = 'CQRS',
-    AtomicDesign = 'Atomic Design'
+    AtomicDesign = 'Atomic Design',
+    GoogleFit = 'Google Fit',
+    GoogleMaps = 'Google Maps',
+    Firebase = 'Firebase',
+    GoogleCloud = 'Google Cloud',
+    Heroku = 'Heroku',
+    Azure = 'Azure'
 }
