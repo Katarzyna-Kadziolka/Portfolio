@@ -37,4 +37,5 @@ export enum Technology {
     Heroku = 'Heroku',
     Azure = 'Azure',
     Grpc = 'gRPC',
+    StabilityAi = 'Stability AI'
 }

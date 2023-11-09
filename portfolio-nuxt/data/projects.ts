@@ -6,6 +6,9 @@ import doskvolTools from "~/assets/images/doskvolTools.png";
 import manageMe from "~/assets/images/manageMe.png";
 import fantasyOdyssey from "~/assets/images/fantasyOdyssey.png";
 import fantasyOdysseyMini from "~/assets/images/fantasyOdysseyMini.png";
+import stabilityClientMini from "~/assets/images/stabilityClientMini.png";
+import stabilityClient from "~/assets/images/stabilityClient.png";
+
 
 export const projects : Project[] = [
     {
@@ -39,10 +42,10 @@ export const projects : Project[] = [
         Name: "StabilityClient.Net",
         Dates: "12.2022 - 02.2023",
         ShortDescription: "gRPC client for StabilitySDK written with .Net 6.",
-        Description: "",
-        ImagePath: doskvolTools,
-        MiniImagePath:doskvolToolsMini,
-        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Grpc, Technology.Git, Technology.Rider]
+        Description: "A gRPC client for StabilitySDK equipped with a fluent builder for convenient request construction and an extension method for AsyncServerStreamingCall to effortlessly save images.",
+        ImagePath: stabilityClient,
+        MiniImagePath:stabilityClientMini,
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Grpc, Technology.StabilityAi, Technology.Git, Technology.Rider]
     },
     {
         Name: "Wild Alert",
