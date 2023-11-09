@@ -50,8 +50,8 @@ hr {
     box-shadow: 8px 8px 23px 0px rgba(66, 68, 90, 1);
     border-radius: 15px;
     &:hover img {
-      transform-origin: left top;
-      animation: scale 300ms ease-in-out forwards;
+      transform-origin: center center;
+      animation: scale 500ms ease-in-out forwards;
     }
   }
   &_image {
@@ -76,14 +76,14 @@ hr {
   }
   &_img-container {
     overflow: hidden;
-    height: 40%;
+    height: 40vh;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
     object-fit: cover;
   }
   &_button-container {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
   }
   &_button {
     width: 100px;

@@ -3,6 +3,7 @@ export enum Technology {
     JavaScript = 'JavaScript',
     TypeScript = 'TypeScript',
     Dart = 'Dart',
+    DotNet = '.NET',
     AspNet = 'ASP.Net',
     Vue = 'Vue',
     Nuxt = 'Nuxt',
@@ -23,6 +24,7 @@ export enum Technology {
     Html = 'HTML',
     Css = 'CSS',
     Scss = 'SCSS',
+    Quasar = 'Quasar',
     Git = 'Git',
     Docker = 'Docker',
     Mvc = 'MVC',
@@ -33,5 +35,6 @@ export enum Technology {
     Firebase = 'Firebase',
     GoogleCloud = 'Google Cloud',
     Heroku = 'Heroku',
-    Azure = 'Azure'
+    Azure = 'Azure',
+    Grpc = 'gRPC',
 }
