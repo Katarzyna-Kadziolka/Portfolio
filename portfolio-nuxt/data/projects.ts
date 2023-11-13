@@ -8,7 +8,10 @@ import fantasyOdyssey from "~/assets/images/fantasyOdyssey.png";
 import fantasyOdysseyMini from "~/assets/images/fantasyOdysseyMini.png";
 import stabilityClientMini from "~/assets/images/stabilityClientMini.png";
 import stabilityClient from "~/assets/images/stabilityClient.png";
-
+import wildAlertAppMini from "~/assets/images/wildAlertAppMini.png";
+import wildAlertApp from "~/assets/images/wildAlertApp.png";
+import cityWellApp from "~/assets/images/cityWellApp.png";
+import cityWellAppMini from "~/assets/images/cityWellAppMini.png";
 
 export const projects : Project[] = [
     {
@@ -50,20 +53,20 @@ export const projects : Project[] = [
     {
         Name: "Wild Alert",
         Dates: "11.2022-11.2022",
-        ShortDescription: "",
-        Description: "",
-        ImagePath: doskvolTools,
-        MiniImagePath:doskvolToolsMini,
+        ShortDescription: "Web application to report and review the presence of wild animals in the city.",
+        Description: "Web application to report and review the presence of wild animals in the city, written during HackYeah 2022 with friends. I was responsible for frontend.",
+        ImagePath: wildAlertApp,
+        MiniImagePath:wildAlertAppMini,
         Technologies: [Technology.Vue, Technology.TypeScript, Technology.Html, Technology.Scss, Technology.Quasar, Technology.Csharp, Technology.DotNet, Technology.Git, Technology.Rider, Technology.VisualStudioCode]
     },
     {
         Name: "CityWellApp",
         Dates: "06.2022-06.2022",
-        ShortDescription: "",
-        Description: "",
-        ImagePath: doskvolTools,
-        MiniImagePath:doskvolToolsMini,
-        Technologies: []
+        ShortDescription: "A web app, which helps city councils manage water in crisis situations.",
+        Description: "A web app, which helps city councils manage water in crisis situations made on second edition of Aquathon. I was responsible for the web application for residents, which performed informational functions and allowed residents to report incidents.",
+        ImagePath: cityWellApp,
+        MiniImagePath:cityWellAppMini,
+        Technologies: [Technology.Vue, Technology.JavaScript, Technology.Html, Technology.Css, Technology.Git, Technology.VisualStudioCode]
     },
     {
         Name: "CthulhuWizardApp",
