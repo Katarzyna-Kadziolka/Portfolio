@@ -12,6 +12,8 @@ import wildAlertAppMini from "~/assets/images/wildAlertAppMini.png";
 import wildAlertApp from "~/assets/images/wildAlertApp.png";
 import cityWellApp from "~/assets/images/cityWellApp.png";
 import cityWellAppMini from "~/assets/images/cityWellAppMini.png";
+import cthulhuWizard from "~/assets/images/cthulhuWizard.png";
+import cthulhuWizardMini from "~/assets/images/cthulhuWizardMini.png";
 
 export const projects : Project[] = [
     {
@@ -71,11 +73,11 @@ export const projects : Project[] = [
     {
         Name: "CthulhuWizardApp",
         Dates: "02.2022-06.2023",
-        ShortDescription: "",
-        Description: "",
-        ImagePath: doskvolTools,
-        MiniImagePath:doskvolToolsMini,
-        Technologies: []
+        ShortDescription: "A web application for generating characters in the RPG game Call of Cthulhu.",
+        Description: "After two years of intensive study, I decided to return to Cthulhu Wizard Creator. This time it is a much more extensive web project, enriched with many new features. Still in progress :)",
+        ImagePath: cthulhuWizard,
+        MiniImagePath:cthulhuWizardMini,
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.Cqrs, Technology.RavenDb, Technology.NoSql, Technology.Docker, Technology.TypeScript, Technology.Vue, Technology.Html, Technology.Scss, Technology.Quasar, Technology.AtomicDesign, Technology.Heroku, Technology.Git, Technology.Rider, Technology.WebStorm]
     },
     {
         Name: "WizardWorldDesktop",
