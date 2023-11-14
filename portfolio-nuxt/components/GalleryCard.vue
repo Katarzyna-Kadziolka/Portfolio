@@ -51,7 +51,7 @@ hr {
     border-radius: 15px;
     &:hover img {
       transform-origin: center center;
-      animation: scale 500ms ease-in-out forwards;
+      animation: scale 200ms ease-in-out forwards;
     }
   }
   &_image {

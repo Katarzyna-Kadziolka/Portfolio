@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import NavButton from "~/components/layout/NavButton.vue";
-import {ref} from 'vue';
 
 const route = useRoute();
-const activeRoute = ref(route.path);
+const activeRoute = computed(() => {
+  return route.path
+})
 
 </script>
 
