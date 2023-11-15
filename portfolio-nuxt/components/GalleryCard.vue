@@ -50,7 +50,7 @@ hr {
     box-shadow: 8px 8px 23px 0px rgba(66, 68, 90, 1);
     border-radius: 15px;
     &:hover img {
-      transform-origin: center center;
+      transform-origin: left top;
       animation: scale 200ms ease-in-out forwards;
     }
   }

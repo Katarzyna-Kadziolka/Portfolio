@@ -14,6 +14,10 @@ import cityWellApp from "~/assets/images/cityWellApp.png";
 import cityWellAppMini from "~/assets/images/cityWellAppMini.png";
 import cthulhuWizard from "~/assets/images/cthulhuWizard.png";
 import cthulhuWizardMini from "~/assets/images/cthulhuWizardMini.png";
+import wizardWorldDesktopMini from "~/assets/images/wizardWorldDesktopMini.png";
+import wizardWorldDesktop from "~/assets/images/wizardWorldDesktop.png";
+import wizardWorldApp from "~/assets/images/wizardWorldApp.png";
+import wizardWorldAppMini from "~/assets/images/wizardWorldAppMini.png";
 
 export const projects : Project[] = [
     {
@@ -82,20 +86,20 @@ export const projects : Project[] = [
     {
         Name: "WizardWorldDesktop",
         Dates: "12.2021-01.2022",
-        ShortDescription: "",
-        Description: "",
-        ImagePath: doskvolTools,
-        MiniImagePath:doskvolToolsMini,
-        Technologies: []
+        ShortDescription: "Simple desktop application write in WPF and .Net 6.0 to browse data from WizardWorldApi.",
+        Description: "Desktop application and WizardWorldAPI client. Allows selection of data categories, advanced filtering and searching. Written using WPF and .Net 6.0.",
+        ImagePath: wizardWorldDesktop,
+        MiniImagePath:wizardWorldDesktopMini,
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf, Technology.Mvvm, Technology.Git, Technology.Rider]
     },
     {
         Name: "WizardWorldApp",
         Dates: "12.2021-01.2022",
-        ShortDescription: "",
-        Description: "",
-        ImagePath: doskvolTools,
-        MiniImagePath:doskvolToolsMini,
-        Technologies: []
+        ShortDescription: "Simple web application write in Blazor to browse data from WizardWorldApi.",
+        Description: "Web application adn WizardWorldAP client. Allows selection of data categories, searching and sending anonymous feedback.Written using Blazor.",
+        ImagePath: wizardWorldApp,
+        MiniImagePath:wizardWorldAppMini,
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Blazor, Technology.Git, Technology.Rider]
     },
     {
         Name: "Town Bestiary",
