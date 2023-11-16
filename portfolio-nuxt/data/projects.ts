@@ -18,6 +18,12 @@ import wizardWorldDesktopMini from "~/assets/images/wizardWorldDesktopMini.png";
 import wizardWorldDesktop from "~/assets/images/wizardWorldDesktop.png";
 import wizardWorldApp from "~/assets/images/wizardWorldApp.png";
 import wizardWorldAppMini from "~/assets/images/wizardWorldAppMini.png";
+import townBestiary from "~/assets/images/townBestiary.png";
+import townBestiaryMini from "~/assets/images/townBestiaryMini.png";
+import rainDrop from "~/assets/images/rainDrop.png";
+import rainDropMini from "~/assets/images/rainDropMini.png";
+import wizardWorldApi from "~/assets/images/wizardWorldApi.png";
+import wizardWorldApiMini from "~/assets/images/wizardWorldApiMini.png";
 
 export const projects : Project[] = [
     {
@@ -104,29 +110,29 @@ export const projects : Project[] = [
     {
         Name: "Town Bestiary",
         Dates: "12.2021-12.2021",
-        ShortDescription: "",
-        Description: "",
-        ImagePath: doskvolTools,
-        MiniImagePath:doskvolToolsMini,
-        Technologies: []
+        ShortDescription: "An educational app to report the presence of wild animals in the city and a symbolic adoption.",
+        Description: "An app that helps solve the problem of sharing urban space with wild animals. We want to raise public awareness to make metropolises nature-friendly so that we and the animals can feel at home in them. I was co-responsible for writing the API using ASP.Net Core and C#. Made at SheepYourHack 3.",
+        ImagePath: townBestiary,
+        MiniImagePath:townBestiaryMini,
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Git, Technology.Rider]
     },
     {
         Name: "Raindrop",
         Dates: "11.2021-11.2021",
-        ShortDescription: "",
-        Description: "",
-        ImagePath: doskvolTools,
-        MiniImagePath:doskvolToolsMini,
-        Technologies: []
+        ShortDescription: "A web application designed to help people choose the right tank and get grants.",
+        Description: "A web application called Raindrop is used to set up and manage backyard rainwater tanks. Made at Aquathon. I was responsible for creating an educational website designed to help people choose the right tank and get grants.",
+        ImagePath: rainDrop,
+        MiniImagePath:rainDropMini,
+        Technologies: [Technology.Vue, Technology.JavaScript, Technology.Html, Technology.Css, Technology.Git, Technology.VisualStudioCode]
     },
     {
         Name: "WizardWorldAPI",
         Dates: "10.2021-02.2022",
-        ShortDescription: "",
-        Description: "",
-        ImagePath: doskvolTools,
-        MiniImagePath:doskvolToolsMini,
-        Technologies: []
+        ShortDescription: "Rest API returning data from the Harry Potter universe, which already has over 1 750 000 connections.",
+        Description: "Rest API written using the CQRS template, with unit tests and integration tests. Returns data from the Harry Potter universe and allows anonymous feedback via email.",
+        ImagePath: wizardWorldApi,
+        MiniImagePath:wizardWorldApiMini,
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.Cqrs, Technology.PostgreSql, Technology.Sql, Technology.SendGrid, Technology.Heroku, Technology.Rider]
     },
     {
         Name: "MediatR.AspNet",
@@ -158,6 +164,15 @@ export const projects : Project[] = [
     {
         Name: "Portfolio",
         Dates: "06.2021-06.2021",
+        ShortDescription: "",
+        Description: "",
+        ImagePath: doskvolTools,
+        MiniImagePath:doskvolToolsMini,
+        Technologies: []
+    },
+    {
+        Name: "HerokuDbConnector",
+        Dates: "02.2021-02.2021",
         ShortDescription: "",
         Description: "",
         ImagePath: doskvolTools,
