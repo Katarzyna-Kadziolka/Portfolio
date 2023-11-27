@@ -51,12 +51,14 @@ const filters : TechnologyFilter[] = reactive([
     display: flex;
     flex-direction: column;
     row-gap: 16px;
+    max-width: 100vw;
   }
   &_gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 40px;
     column-gap: 16px;
+    max-width: 100vw;
   }
   &_gallery-card {
     width: 30vw;

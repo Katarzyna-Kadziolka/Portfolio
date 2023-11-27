@@ -18,7 +18,7 @@ const imageUrl = new URL(props.imagePath, import.meta.url)
 <template>
   <div class="gallery-card_container">
     <div class="gallery-card_img-container">
-      <img :src="imageUrl" :alt="title" class="gallery-card_image">
+      <img :src="imageUrl" :alt="title" class="gallery-card_img">
     </div>
     <div class="gallery-card_content">
       <span class="gallery-card_title"><b>{{title}}</b></span>
@@ -40,30 +40,41 @@ hr {
   height: 1px;
   width: 100%;
 }
-@keyframes scale {
-  to {
-    transform: scale(1.2);
-  }
-}
+
 .gallery-card {
   &_container {
-    box-shadow: 8px 8px 23px 0px rgba(66, 68, 90, 1);
-    border-radius: 15px;
-    &:hover img {
-      transform-origin: left top;
-      animation: scale 200ms ease-in-out forwards;
-    }
-  }
-  &_image {
+    margin: 0px 0px 1.5em;
+    position: relative;
+    cursor: pointer;
     object-fit: cover;
-    width: 40vw;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 9px;
+    break-inside: avoid;
+    height: 50vh;
+  }
+  &_img {
+    object-fit: cover;
   }
   &_content {
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-    row-gap: 8px;
+    opacity: 0;
+    transform: translateY(10%);
+    transition: opacity 300ms ease-in-out 0s, transform 300ms ease-in-out 0s;
   }
+
+  &_img-container {
+    position: absolute;
+    object-fit: cover;
+    width: 100% !important;
+    height: 100% !important;
+    left: 0 !important;
+    top: 0 !important;
+  }
+
+
+
+
   &_title {
     font-size: 1.2rem;
   }
@@ -73,13 +84,6 @@ hr {
     column-gap: 8px;
     row-gap: 8px;
     flex-wrap: wrap;
-  }
-  &_img-container {
-    overflow: hidden;
-    height: 40vh;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    object-fit: cover;
   }
   &_button-container {
     display: flex;
