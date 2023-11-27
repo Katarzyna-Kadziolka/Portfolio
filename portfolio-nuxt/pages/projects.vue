@@ -27,10 +27,6 @@ const filters : TechnologyFilter[] = reactive([
 
 <template>
   <div class="projects_container">
-    <div class="projects_filters">
-      <span><b>Show only:</b> </span>
-      <BaseCheckbox v-for="filter in filters" :key="filter" v-model="filter.IsChecked" :label="filter.Technology" class="projects_checkbox" />
-    </div>
     <div class="projects_gallery">
       <GalleryCard
           v-for="project in projects"
@@ -66,17 +62,6 @@ const filters : TechnologyFilter[] = reactive([
   }
   &_title {
     font-size: 1.5rem;
-  }
-  &_filters {
-    border: $primary solid 2px;
-    background: $p-accent;
-    padding: 8px;
-    border-radius: 15px;
-    display: flex;
-    column-gap: 16px;
-    align-items: center;
-    width: 30%;
-    flex-wrap: wrap;
   }
 }
 </style>
