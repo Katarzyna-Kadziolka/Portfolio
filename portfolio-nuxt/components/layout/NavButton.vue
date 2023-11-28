@@ -20,7 +20,7 @@ defineProps<{
 <style scoped lang="scss">
 .nav-button {
   &_container {
-    color: white;
+    color: $primary;
     cursor: pointer;
     padding: 8px;
     border-radius: 15px;

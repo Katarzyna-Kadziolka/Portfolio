@@ -27,9 +27,9 @@ const activeRoute = computed(() => {
 <style scoped lang="scss">
 .default {
   &_container {
-    background: linear-gradient(90deg, $primary, $p-secondary);
+    background: #393943;
     height: 40px;
-    border-bottom: $p-secondary solid 1px;
+    border-bottom: #484b54 solid 1px;
     display: flex;
     align-items: center;
     padding: 8px;
@@ -40,7 +40,7 @@ const activeRoute = computed(() => {
     height: 40px;
   }
   &_title {
-    color: white;
+    color: $primary;
     font-size: 1.5rem;
   }
   &_buttons {
