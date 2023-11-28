@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import BaseCheckbox from "~/components/common/BaseCheckbox.vue";
 import {Technology} from "~/types/technology";
 import {TechnologyFilter} from "~/types/technologyFilter";
 import {projects} from "~/data/projects"
+import Filter from "~/components/common/Filter.vue";
 
 const filters : TechnologyFilter[] = reactive([
   {
@@ -21,11 +21,16 @@ const filters : TechnologyFilter[] = reactive([
     Technology: Technology.Flutter,
     IsChecked: false
   },
+  {
+    Technology: Technology.Python,
+    IsChecked: false
+  },
 ]);
 
 </script>
 
 <template>
+  <Filter :filters="filters" />
   <div class="projects_container">
     <div class="projects_gallery">
       <GalleryCard
@@ -43,7 +48,7 @@ const filters : TechnologyFilter[] = reactive([
 <style scoped lang="scss">
 .projects {
   &_container {
-    padding: 24px;
+    padding: 64px 24px 24px;
     display: flex;
     flex-direction: column;
     row-gap: 16px;
