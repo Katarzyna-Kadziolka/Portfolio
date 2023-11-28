@@ -29,9 +29,9 @@ const activeRoute = computed(() => {
 <style scoped lang="scss">
 .default {
   &_container {
-    background: #393943;
+    background: $nav-primary;
     height: 40px;
-    border-bottom: #484b54 solid 1px;
+    border-bottom: $nav-secondary solid 1px;
     display: flex;
     align-items: center;
     padding: 8px;

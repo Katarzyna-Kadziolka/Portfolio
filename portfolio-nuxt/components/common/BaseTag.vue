@@ -13,10 +13,11 @@ defineProps<{
 <style scoped lang="scss">
 .base-tag {
   &_container {
-    background: $p-secondary ;
-    color: white;
+    background: $nav-secondary ;
+    color: $primary;
     padding: 8px;
     border-radius: 15px;
+    border: 2px solid $primary;
   }
 }
 </style>

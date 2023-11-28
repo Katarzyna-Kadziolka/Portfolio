@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import BaseCheckbox from "~/components/common/BaseCheckbox.vue";
 import {Technology} from "~/types/technology";
 import {TechnologyFilter} from "~/types/technologyFilter";
 import {projects} from "~/data/projects"
+import Filter from "~/components/common/Filter.vue";
 
 const filters : TechnologyFilter[] = reactive([
   {
@@ -21,15 +21,30 @@ const filters : TechnologyFilter[] = reactive([
     Technology: Technology.Flutter,
     IsChecked: false
   },
+  {
+    Technology: Technology.Python,
+    IsChecked: false
+  },
 ]);
+
+const filteredProjects = computed(() => {
+  if(filters.every((a) => !a.IsChecked)) return projects;
+  return projects.filter(p => {
+    return p.MainTechnologies.some(tech => {
+      const correspondingFilter = filters.find(f => f.Technology === tech);
+      return correspondingFilter && correspondingFilter.IsChecked;
+    });
+  });
+})
 
 </script>
 
 <template>
+  <Filter :filters="filters" />
   <div class="projects_container">
     <div class="projects_gallery">
       <GalleryCard
-          v-for="project in projects"
+          v-for="project in filteredProjects"
           :key="project.Name"
           :title="project.Name"
           :description="project.ShortDescription"
@@ -43,7 +58,7 @@ const filters : TechnologyFilter[] = reactive([
 <style scoped lang="scss">
 .projects {
   &_container {
-    padding: 24px;
+    padding: 64px 24px 24px;
     display: flex;
     flex-direction: column;
     row-gap: 16px;
