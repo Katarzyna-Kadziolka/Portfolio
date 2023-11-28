@@ -27,6 +27,16 @@ const filters : TechnologyFilter[] = reactive([
   },
 ]);
 
+const filteredProjects = computed(() => {
+  if(filters.every((a) => !a.IsChecked)) return projects;
+  return projects.filter(p => {
+    return p.MainTechnologies.some(tech => {
+      const correspondingFilter = filters.find(f => f.Technology === tech);
+      return correspondingFilter && correspondingFilter.IsChecked;
+    });
+  });
+})
+
 </script>
 
 <template>
@@ -34,7 +44,7 @@ const filters : TechnologyFilter[] = reactive([
   <div class="projects_container">
     <div class="projects_gallery">
       <GalleryCard
-          v-for="project in projects"
+          v-for="project in filteredProjects"
           :key="project.Name"
           :title="project.Name"
           :description="project.ShortDescription"
