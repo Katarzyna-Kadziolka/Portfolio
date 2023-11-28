@@ -33,7 +33,7 @@ const filters : TechnologyFilter[] = reactive([
           :key="project.Name"
           :title="project.Name"
           :description="project.ShortDescription"
-          :technologies="project.Technologies"
+          :technologies="project.MainTechnologies"
           :image-path="project.MiniImagePath"
           class="projects_gallery-card"/>
     </div>

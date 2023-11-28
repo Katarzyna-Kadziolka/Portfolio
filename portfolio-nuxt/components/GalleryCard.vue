@@ -23,11 +23,20 @@ const imageUrl = new URL(props.imagePath, import.meta.url)
     <div class="gallery-card_content">
       <span class="gallery-card_title"><b>{{title}}</b></span>
       <span>{{description}}</span>
+      <hr>
+      <div class="gallery-card_tags">
+        <BaseTag v-for="technology in technologies" :label="technology" />
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
+hr {
+  width: 100%;
+  height: 1px;
+  background: #FFEDE6;
+}
 .gallery-card {
   &_container {
     position: relative;
@@ -70,6 +79,10 @@ const imageUrl = new URL(props.imagePath, import.meta.url)
   }
   &_title {
     font-size: 1.5rem;
+  }
+  &_tags {
+    display: flex;
+    column-gap: 8px;
   }
 }
 </style>

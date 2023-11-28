@@ -7,5 +7,6 @@ export interface Project {
     Description: string,
     MiniImagePath: string,
     ImagePath: string,
-    Technologies: Technology[]
+    Technologies: Technology[],
+    MainTechnologies: Technology[]
 }

@@ -47,13 +47,14 @@ import cthulhuCreatorMini from "~/assets/images/cthulhuCreatorMini.png";
 
 export const projects : Project[] = [
     {
-        Name: "Doscvol Tools",
+        Name: "Doskvol Tools",
         Dates: "09.2023-09.2023",
         ShortDescription: "Content generator for RPG game Blades In The Dark.",
         Description: "I have written a web application to facilitate the use of the tables in the Blades in the Dark game manual. The game master can quickly generate the result, correct any mismatched elements and copy the result to the notes.",
         ImagePath: doskvolTools,
         MiniImagePath: doskvolToolsMini,
-        Technologies: [Technology.Vue, Technology.TypeScript, Technology.Html, Technology.Scss, Technology.Git, Technology.WebStorm]
+        Technologies: [Technology.Vue, Technology.TypeScript, Technology.Html, Technology.Scss, Technology.Git, Technology.WebStorm],
+        MainTechnologies: [Technology.Vue, Technology.TypeScript]
     },
     {
         Name: "Manage Me",
@@ -62,7 +63,8 @@ export const projects : Project[] = [
         Description: "My first contact with Angular! As part of a class at university, I created a web application for project management. It provides full CRUD features and tasks.",
         ImagePath: manageMe,
         MiniImagePath: manageMeMini,
-        Technologies: [Technology.Angular, Technology.TypeScript, Technology.Html, Technology.Scss, Technology.Git, Technology.VisualStudioCode]
+        Technologies: [Technology.Angular, Technology.TypeScript, Technology.Html, Technology.Scss, Technology.Git, Technology.VisualStudioCode],
+        MainTechnologies: [Technology.Angular, Technology.TypeScript]
     },
     {
         Name: "Fantasy Odyssey",
@@ -71,7 +73,8 @@ export const projects : Project[] = [
         Description: "A mobile app that allows the user to accompany Frodo on his journey to Mount Doom and back. Based on the distance travelled, it informs the user of events along the trail that took place in the novel.",
         ImagePath: fantasyOdyssey,
         MiniImagePath: fantasyOdysseyMini,
-        Technologies: [Technology.Dart, Technology.Flutter, Technology.GoogleFit, Technology.Firebase, Technology.GoogleCloud, Technology.Git, Technology.AndroidStudio]
+        Technologies: [Technology.Dart, Technology.Flutter, Technology.GoogleFit, Technology.Firebase, Technology.GoogleCloud, Technology.Git, Technology.AndroidStudio],
+        MainTechnologies: [Technology.Dart, Technology.Flutter]
     },
     {
         Name: "StabilityClient.Net",
@@ -80,7 +83,8 @@ export const projects : Project[] = [
         Description: "A gRPC client for StabilitySDK equipped with a fluent builder for convenient request construction and an extension method for AsyncServerStreamingCall to effortlessly save images.",
         ImagePath: stabilityClient,
         MiniImagePath: stabilityClientMini,
-        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Grpc, Technology.StabilityAi, Technology.Git, Technology.Rider]
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Grpc, Technology.StabilityAi, Technology.Git, Technology.Rider],
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.Grpc]
     },
     {
         Name: "Wild Alert",
@@ -89,7 +93,8 @@ export const projects : Project[] = [
         Description: "Web application to report and review the presence of wild animals in the city, written during HackYeah 2022 with friends. I was responsible for frontend.",
         ImagePath: wildAlertApp,
         MiniImagePath: wildAlertAppMini,
-        Technologies: [Technology.Vue, Technology.TypeScript, Technology.Html, Technology.Scss, Technology.Quasar, Technology.Csharp, Technology.DotNet, Technology.Git, Technology.Rider, Technology.VisualStudioCode]
+        Technologies: [Technology.Vue, Technology.TypeScript, Technology.Html, Technology.Scss, Technology.Quasar, Technology.Csharp, Technology.DotNet, Technology.Git, Technology.Rider, Technology.VisualStudioCode],
+        MainTechnologies: [Technology.Vue, Technology.TypeScript]
     },
     {
         Name: "CityWellApp",
@@ -98,7 +103,8 @@ export const projects : Project[] = [
         Description: "A web app, which helps city councils manage water in crisis situations made on second edition of Aquathon. I was responsible for the web application for residents, which performed informational functions and allowed residents to report incidents.",
         ImagePath: cityWellApp,
         MiniImagePath: cityWellAppMini,
-        Technologies: [Technology.Vue, Technology.JavaScript, Technology.Html, Technology.Css, Technology.Git, Technology.VisualStudioCode]
+        Technologies: [Technology.Vue, Technology.JavaScript, Technology.Html, Technology.Css, Technology.Git, Technology.VisualStudioCode],
+        MainTechnologies: [Technology.Vue, Technology.JavaScript]
     },
     {
         Name: "CthulhuWizardApp",
@@ -107,7 +113,8 @@ export const projects : Project[] = [
         Description: "After two years of intensive study, I decided to return to Cthulhu Wizard Creator. This time it is a much more extensive web project, enriched with many new features. Still in progress :)",
         ImagePath: cthulhuWizard,
         MiniImagePath: cthulhuWizardMini,
-        Technologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.Cqrs, Technology.RavenDb, Technology.NoSql, Technology.Docker, Technology.TypeScript, Technology.Vue, Technology.Html, Technology.Scss, Technology.Quasar, Technology.AtomicDesign, Technology.Heroku, Technology.Git, Technology.Rider, Technology.WebStorm]
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.Cqrs, Technology.RavenDb, Technology.NoSql, Technology.Docker, Technology.TypeScript, Technology.Vue, Technology.Html, Technology.Scss, Technology.Quasar, Technology.AtomicDesign, Technology.Heroku, Technology.Git, Technology.Rider, Technology.WebStorm],
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.Vue, Technology.TypeScript]
     },
     {
         Name: "WizardWorldDesktop",
@@ -116,7 +123,8 @@ export const projects : Project[] = [
         Description: "Desktop application and WizardWorldAPI client. Allows selection of data categories, advanced filtering and searching. Written using WPF and .Net 6.0.",
         ImagePath: wizardWorldDesktop,
         MiniImagePath: wizardWorldDesktopMini,
-        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf, Technology.Mvvm, Technology.Git, Technology.Rider]
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf, Technology.Mvvm, Technology.Git, Technology.Rider],
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf]
     },
     {
         Name: "WizardWorldApp",
@@ -125,7 +133,8 @@ export const projects : Project[] = [
         Description: "Web application adn WizardWorldAP client. Allows selection of data categories, searching and sending anonymous feedback.Written using Blazor.",
         ImagePath: wizardWorldApp,
         MiniImagePath: wizardWorldAppMini,
-        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Blazor, Technology.Git, Technology.Rider]
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Blazor, Technology.Git, Technology.Rider],
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.Blazor]
     },
     {
         Name: "Town Bestiary",
@@ -134,7 +143,8 @@ export const projects : Project[] = [
         Description: "An app that helps solve the problem of sharing urban space with wild animals. We want to raise public awareness to make metropolises nature-friendly so that we and the animals can feel at home in them. I was co-responsible for writing the API using ASP.Net Core and C#. Made at SheepYourHack 3.",
         ImagePath: townBestiary,
         MiniImagePath: townBestiaryMini,
-        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Git, Technology.Rider]
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Git, Technology.Rider],
+        MainTechnologies: [Technology.Csharp, Technology.DotNet]
     },
     {
         Name: "Raindrop",
@@ -143,7 +153,8 @@ export const projects : Project[] = [
         Description: "A web application called Raindrop is used to set up and manage backyard rainwater tanks. Made at Aquathon. I was responsible for creating an educational website designed to help people choose the right tank and get grants.",
         ImagePath: rainDrop,
         MiniImagePath: rainDropMini,
-        Technologies: [Technology.Vue, Technology.JavaScript, Technology.Html, Technology.Css, Technology.Git, Technology.VisualStudioCode]
+        Technologies: [Technology.Vue, Technology.JavaScript, Technology.Html, Technology.Css, Technology.Git, Technology.VisualStudioCode],
+        MainTechnologies: [Technology.Vue, Technology.JavaScript]
     },
     {
         Name: "WizardWorldAPI",
@@ -152,7 +163,8 @@ export const projects : Project[] = [
         Description: "Rest API written using the CQRS template, with unit tests and integration tests. Returns data from the Harry Potter universe and allows anonymous feedback via email.",
         ImagePath: wizardWorldApi,
         MiniImagePath: wizardWorldApiMini,
-        Technologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.Cqrs, Technology.PostgreSql, Technology.Sql, Technology.SendGrid, Technology.Heroku, Technology.Rider]
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.Cqrs, Technology.PostgreSql, Technology.Sql, Technology.SendGrid, Technology.Heroku, Technology.Rider],
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet]
     },
     {
         Name: "MediatR.AspNet",
@@ -161,7 +173,8 @@ export const projects : Project[] = [
         Description: "MediatR.AspNet is a CQRS (Command and Query Responsibility Segregation) support for MediatR in ASP.Net. Helps to implement CQRS pattern into RestApi.",
         ImagePath: mediatRAspNet,
         MiniImagePath: mediatRAspNet,
-        Technologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.Cqrs, Technology.Git, Technology.Rider]
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.Cqrs, Technology.Git, Technology.Rider],
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet]
     },
     {
         Name: "Urania",
@@ -170,7 +183,8 @@ export const projects : Project[] = [
         Description: "Urania is a calculator of wire parameters developed for Bruxa Jewelry in order to simplify choosing the right material for chainmaille jewelry.",
         ImagePath: urania,
         MiniImagePath: urania,
-        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf, Technology.Mvvm, Technology.Git, Technology.VisualStudio]
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf, Technology.Mvvm, Technology.Git, Technology.VisualStudio],
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf]
     },
     {
         Name: "Witcher Tools",
@@ -179,7 +193,8 @@ export const projects : Project[] = [
         Description: "Rest API, tools for the TTRPG The Witcher. Depending on the ingredients and type, returns available alchemical recipes.",
         ImagePath: witcherApi,
         MiniImagePath: witcherApiMini,
-        Technologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.MongoDb, Technology.Azure, Technology.Git, Technology.VisualStudio]
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.MongoDb, Technology.Azure, Technology.Git, Technology.VisualStudio],
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet]
     },
     {
         Name: "Portfolio",
@@ -188,7 +203,8 @@ export const projects : Project[] = [
         Description: "I created a portfolio that contains all my projects and skills. Everything was written using Blazor.",
         ImagePath: portfolio,
         MiniImagePath: portfolioMini,
-        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Blazor, Technology.Html, Technology.Css, Technology.Git, Technology.Rider]
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Blazor, Technology.Html, Technology.Css, Technology.Git, Technology.Rider],
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.Blazor]
     },
     {
         Name: "HerokuDbConnector",
@@ -197,7 +213,8 @@ export const projects : Project[] = [
         Description: "HerokuDbConnector is .Net support for Heroku Db. Helps to connect with database easily.",
         ImagePath: herokuDbConnector,
         MiniImagePath: herokuDbConnector,
-        Technologies: [Technology.Csharp, Technology.DotNet, Technology.PostgreSql, Technology.Heroku, Technology.Git, Technology.Rider]
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.PostgreSql, Technology.Heroku, Technology.Git, Technology.Rider],
+        MainTechnologies: [Technology.Csharp, Technology.DotNet]
     },
     {
         Name: "Athena",
@@ -206,7 +223,8 @@ export const projects : Project[] = [
         Description: "Athena is a desktop application that is used to manage your home library. It allows you to add, edit and delete books, authors, series, publishers, and storage locations. Multiple categories can be assigned to a single book. A book search bar is present, you can search not only by title. Athena also supports borrowing books and stores a list of borrows. This is my first larger group project.",
         ImagePath: athena,
         MiniImagePath: athenaMini,
-        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf, Technology.Mvvm, Technology.Git, Technology.VisualStudio]
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf, Technology.Mvvm, Technology.Git, Technology.VisualStudio],
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf]
     },
     {
         Name: "CatFacts.Net",
@@ -215,7 +233,8 @@ export const projects : Project[] = [
         Description: "CatFacts.Net is a client for the cat-facts API. It allows you to get random facts about cats. Through this project, I wanted to learn how to work with the API.",
         ImagePath: catFacts,
         MiniImagePath: catFacts,
-        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Git, Technology.VisualStudio]
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Git, Technology.VisualStudio],
+        MainTechnologies: [Technology.Csharp, Technology.DotNet]
     },
     {
         Name: "Time Library",
@@ -224,7 +243,8 @@ export const projects : Project[] = [
         Description: "This is a library for storing time. It has options to add seconds, minutes and hours, overrides comparison operators. It also contains tests.",
         ImagePath: timeLibrary,
         MiniImagePath:timeLibraryMini,
-        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Git, Technology.VisualStudio]
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Git, Technology.VisualStudio],
+        MainTechnologies: [Technology.Csharp, Technology.DotNet]
     },
     {
         Name: "Printy",
@@ -233,7 +253,8 @@ export const projects : Project[] = [
         Description: "Printy is a web app, which solves the problem of difficult access to printing spots. Printy allows any private person to share his idle printer and earn some money from it. With Printy, customers can easily find and upload files to print and then just go pick up it from the neighbor. Made at SheepYourHack 2. I was responsible for presentations and business project development.",
         ImagePath: printy,
         MiniImagePath:printyMini,
-        Technologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.Git, Technology.VisualStudio]
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.Git, Technology.VisualStudio],
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet]
     },
     {
         Name: "Chronos",
@@ -242,7 +263,8 @@ export const projects : Project[] = [
         Description: "Chronos is an API that can be used to create an application to manage your tasks. I learned ASP.Net based on this project. The API supports tasks, deadlines, and task categories.",
         ImagePath: chronos,
         MiniImagePath:chronosMini,
-        Technologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.Git, Technology.VisualStudio]
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.Git, Technology.VisualStudio],
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet]
     },
     {
         Name: "Cerebri",
@@ -251,7 +273,8 @@ export const projects : Project[] = [
         Description: "Cerebri is a simple descope app for managing work and rests time in the Pomodoro system (4 focus sessions of 25 minutes each interspersed with 5-minute breaks, followed by a longer 20-minute break). The app also can save tasks and tick them off. While working on this application, I learned the basics of C# and WPF.",
         ImagePath: cerebri,
         MiniImagePath:cerebri,
-        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf, Technology.Git, Technology.VisualStudio]
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf, Technology.Git, Technology.VisualStudio],
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf]
     },
     {
         Name: "Cthulhu Character Wizard",
@@ -260,6 +283,7 @@ export const projects : Project[] = [
         Description: "Cthulhu Wizard Creator is a desktop application that facilitates the creation of researcher characters in the RPG Cthulhu. It is possible to create the character yourself step by step, use the random function only on selected items, as well as completely randomize the character. There are 111 professions to choose from. Each profession has its specifications, according to the manual (7th edition of the game).",
         ImagePath: cthulhuCreator,
         MiniImagePath:cthulhuCreatorMini,
-        Technologies: [Technology.Python, Technology.TkInter, Technology.Git, Technology.VisualStudioCode]
+        Technologies: [Technology.Python, Technology.TkInter, Technology.Git, Technology.VisualStudioCode],
+        MainTechnologies: [Technology.Python, Technology.TkInter]
     }
 ]
