@@ -21,26 +21,35 @@ const activeRoute = computed(() => {
       <NavButton label="Time line" icon="fa-solid fa-timeline" link="/TimeLine" :class="[activeRoute.valueOf() === '/TimeLine' ? 'default_active' : '']"/>
     </div>
   </div>
-  <slot />
+  <div class="default_slot">
+    <slot/>
+  </div>
 </template>
 
 <style scoped lang="scss">
 .default {
   &_container {
-    background: linear-gradient(90deg, $primary, $p-secondary);
+    background: #393943;
     height: 40px;
-    border-bottom: $p-secondary solid 1px;
+    border-bottom: #484b54 solid 1px;
     display: flex;
     align-items: center;
     padding: 8px;
     column-gap: 8px;
+    position: fixed;
+    width: 100vw;
+    z-index: 2;
+  }
+  &_slot {
+    padding-top: 56px;
+    z-index: 1;
   }
   &_logo {
     width: 40px;
     height: 40px;
   }
   &_title {
-    color: white;
+    color: $primary;
     font-size: 1.5rem;
   }
   &_buttons {
