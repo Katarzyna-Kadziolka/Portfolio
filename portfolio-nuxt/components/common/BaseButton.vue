@@ -13,11 +13,11 @@ defineProps<{
 <style scoped lang="scss">
 .base-button {
   &_container {
-    border: $p-secondary solid 2px;
-    background: $primary;
+    border: 2px solid $primary;
+    background: $nav-primary;
     padding: 4px 8px 4px 8px;
     border-radius: 15px;
-    color: white;
+    color: $primary;
     display: flex;
     justify-content: center;
     align-items: center;
