@@ -68,6 +68,10 @@ hr {
     &:hover {
       opacity: 1;
     }
+    @media (max-width: 768px) {
+      opacity: 1;
+      background: linear-gradient(0deg, rgba(72, 75, 84, 1) 50%, rgba(72, 75, 84, 0));
+    }
   }
   &_img-container {
     position: absolute;
