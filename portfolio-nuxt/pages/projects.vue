@@ -70,10 +70,16 @@ const filteredProjects = computed(() => {
     row-gap: 40px;
     column-gap: 16px;
     max-width: 100vw;
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
   }
   &_gallery-card {
     width: 30vw;
     justify-self: center;
+    @media (max-width: 768px) {
+      width: 80vw;
+    }
   }
   &_title {
     font-size: 1.5rem;
