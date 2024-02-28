@@ -78,6 +78,8 @@ dialog {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border: 3px solid $nav-secondary;
+  border-radius: 15px;
   &::backdrop {
     background: $nav-primary;
     opacity: 75%;

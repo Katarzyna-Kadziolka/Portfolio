@@ -22,6 +22,7 @@ defineProps<{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    height: 30px;
   }
 }
 </style>
