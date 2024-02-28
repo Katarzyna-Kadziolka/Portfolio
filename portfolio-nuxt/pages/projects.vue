@@ -3,8 +3,11 @@ import {Technology} from "~/types/technology";
 import {TechnologyFilter} from "~/types/technologyFilter";
 import {projects} from "~/data/projects"
 import Filter from "~/components/common/Filter.vue";
+import Carrousel from "~/components/features/projects/Carrousel.vue";
+import GalleryCard from "~/components/features/projects/GalleryCard.vue";
+import { ref } from "vue";
 
-const filters : TechnologyFilter[] = reactive([
+const filters: TechnologyFilter[] = reactive([
   {
     Technology: Technology.Csharp,
     IsChecked: false
@@ -28,7 +31,7 @@ const filters : TechnologyFilter[] = reactive([
 ]);
 
 const filteredProjects = computed(() => {
-  if(filters.every((a) => !a.IsChecked)) return projects;
+  if (filters.every((a) => !a.IsChecked)) return projects;
   return projects.filter(p => {
     return p.MainTechnologies.some(tech => {
       const correspondingFilter = filters.find(f => f.Technology === tech);
@@ -37,10 +40,20 @@ const filteredProjects = computed(() => {
   });
 })
 
+const dialog = ref<HTMLDialogElement>()
+
+const showProject = () => {
+  if (dialog.value) dialog.value.showModal();
+}
+
+const closeProject = () => {
+  if (dialog.value) dialog.value.close();
+}
+
 </script>
 
 <template>
-  <Filter :filters="filters" />
+  <Filter :filters="filters"/>
   <div class="projects_container">
     <div class="projects_gallery">
       <GalleryCard
@@ -50,12 +63,27 @@ const filteredProjects = computed(() => {
           :description="project.ShortDescription"
           :technologies="project.MainTechnologies"
           :image-path="project.MiniImagePath"
+          @click="showProject"
           class="projects_gallery-card"/>
     </div>
   </div>
+  <dialog ref="dialog">
+    <Carrousel class="projects_carousel"/>
+  </dialog>
 </template>
 
 <style scoped lang="scss">
+dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &::backdrop {
+    background: $nav-primary;
+    opacity: 75%;
+  }
+}
+
 .projects {
   &_container {
     padding: 64px 24px 24px;
@@ -64,6 +92,7 @@ const filteredProjects = computed(() => {
     row-gap: 16px;
     max-width: 100vw;
   }
+
   &_gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -74,6 +103,7 @@ const filteredProjects = computed(() => {
       grid-template-columns: 1fr;
     }
   }
+
   &_gallery-card {
     width: 30vw;
     justify-self: center;
@@ -81,8 +111,10 @@ const filteredProjects = computed(() => {
       width: 80vw;
     }
   }
+
   &_title {
     font-size: 1.5rem;
   }
+
 }
 </style>

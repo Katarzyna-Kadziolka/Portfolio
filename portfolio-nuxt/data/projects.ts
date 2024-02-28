@@ -159,7 +159,7 @@ export const projects : Project[] = [
     {
         Name: "WizardWorldAPI",
         Dates: "10.2021-02.2022",
-        ShortDescription: "Rest API returning data from the Harry Potter universe, which already has over 1 750 000 connections.",
+        ShortDescription: "Rest API returning data from the Harry Potter universe, which already has over 2 300 000 connections.",
         Description: "Rest API written using the CQRS template, with unit tests and integration tests. Returns data from the Harry Potter universe and allows anonymous feedback via email.",
         ImagePath: wizardWorldApi,
         MiniImagePath: wizardWorldApiMini,
