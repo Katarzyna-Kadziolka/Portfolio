@@ -5,7 +5,8 @@ import {projects} from "~/data/projects"
 import Filter from "~/components/common/Filter.vue";
 import Carrousel from "~/components/features/projects/Carrousel.vue";
 import GalleryCard from "~/components/features/projects/GalleryCard.vue";
-import { ref } from "vue";
+import {ref} from "vue";
+import {Project} from "~/types/project";
 
 const filters: TechnologyFilter[] = reactive([
   {
@@ -41,8 +42,19 @@ const filteredProjects = computed(() => {
 })
 
 const dialog = ref<HTMLDialogElement>()
+const activeProject = ref<Project>({
+  Dates: "",
+  ImagePath: "",
+  Description: "",
+  MainTechnologies: [],
+  Name: "",
+  MiniImagePath: "",
+  ShortDescription: "",
+  Technologies: []
+})
 
-const showProject = () => {
+const showProject = (project: Project) => {
+  activeProject.value = project;
   if (dialog.value) dialog.value.showModal();
 }
 
@@ -63,12 +75,14 @@ const closeProject = () => {
           :description="project.ShortDescription"
           :technologies="project.MainTechnologies"
           :image-path="project.MiniImagePath"
-          @click="showProject"
+          @click="showProject(project)"
           class="projects_gallery-card"/>
     </div>
   </div>
   <dialog ref="dialog">
-    <Carrousel class="projects_carousel"/>
+    <Carrousel class="projects_carousel" :date="activeProject.Dates" :description="activeProject.Description"
+               :image-path="activeProject.ImagePath" :technologies="activeProject.Technologies"
+               :title="activeProject.Name"/>
   </dialog>
 </template>
 
@@ -80,6 +94,7 @@ dialog {
   transform: translate(-50%, -50%);
   border: 3px solid $nav-secondary;
   border-radius: 15px;
+
   &::backdrop {
     background: $nav-primary;
     opacity: 75%;

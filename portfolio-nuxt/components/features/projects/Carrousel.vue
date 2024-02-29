@@ -1,36 +1,43 @@
 <script setup lang="ts">
-
-
 import BaseTag from "~/components/common/BaseTag.vue";
 import {Technology} from "~/types/technology";
 import BaseButton from "~/components/common/BaseButton.vue";
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+
+const props = defineProps<{
+  title: string,
+  description: string,
+  technologies: Technology[],
+  imagePath: string,
+  date: string,
+}>()
+
+const imageUrl = new URL(props.imagePath, import.meta.url)
 </script>
 
 <template>
   <div class="carrousel_container">
+    <div class="carrousel_exit-button">
+      <FontAwesomeIcon icon="fa solid fa-xmark" />
+    </div>
     <div class="carrousel_img-container">
-      <img src="~/assets/images/doskvolTools.png" alt="Doskvol tools">
+      <img :src="imagePath" :alt="title">
     </div>
     <div class="carrousel_content">
-      <span class="carrousel_title">Doskvol Tools</span>
-      <span>09.2023-09.2023</span>
-      <span class="carrousel_description">I have written a web application to facilitate the use of the tables in the Blades in the Dark game manual. The game master can quickly generate the result, correct any mismatched elements and copy the result to the notes.</span>
+      <span class="carrousel_title">{{ title }}</span>
+      <span>{{ date }}</span>
+      <span class="carrousel_description">{{ description }}</span>
     </div>
     <div class="carrousel_tags">
-      <BaseTag :label=Technology.Vue />
-      <BaseTag :label=Technology.TypeScript />
-      <BaseTag :label=Technology.Html />
-      <BaseTag :label=Technology.Scss />
-      <BaseTag :label=Technology.WebStorm />
-      <BaseTag :label=Technology.Git />
+      <BaseTag v-for="technology in technologies" :label="technology" />
     </div>
     <div class="carrousel_buttons">
-      <BaseButton label="Github" class="carrousel_button" ></BaseButton>
-      <BaseButton label="Website" class="carrousel_button"></BaseButton>
+      <BaseButton label="Github" class="carrousel_button" />
+      <BaseButton label="Website" class="carrousel_button" />
     </div>
     <div class="carrousel_navigations">
-      <BaseButton class="carrousel_nav-button" label="<"></BaseButton>
-      <BaseButton class="carrousel_nav-button" label=">"></BaseButton>
+      <BaseButton class="carrousel_nav-button" label="<" />
+      <BaseButton class="carrousel_nav-button" label=">" />
     </div>
   </div>
 </template>
@@ -87,6 +94,22 @@ img {
   }
   &_nav-button {
     width: 25px;
+  }
+  &_exit-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: $nav-primary;
+    border: 2px solid $primary;
+    cursor: pointer;
+    font-size: 1.5rem;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $primary;
   }
 }
 </style>
