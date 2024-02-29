@@ -17,7 +17,7 @@ const imageUrl = new URL(props.imagePath, import.meta.url)
 
 <template>
   <div class="carrousel_container">
-    <div class="carrousel_exit-button">
+    <div class="carrousel_exit-button" @click="$emit('close')">
       <FontAwesomeIcon icon="fa solid fa-xmark" />
     </div>
     <div class="carrousel_img-container">

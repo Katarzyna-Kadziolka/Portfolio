@@ -82,7 +82,7 @@ const closeProject = () => {
   <dialog ref="dialog">
     <Carrousel class="projects_carousel" :date="activeProject.Dates" :description="activeProject.Description"
                :image-path="activeProject.ImagePath" :technologies="activeProject.Technologies"
-               :title="activeProject.Name"/>
+               :title="activeProject.Name" @close="closeProject"/>
   </dialog>
 </template>
 
