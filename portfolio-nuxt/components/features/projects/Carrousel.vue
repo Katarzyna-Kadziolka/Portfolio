@@ -1,18 +1,25 @@
 <script setup lang="ts">
 import BaseTag from "~/components/common/BaseTag.vue";
-import {Technology} from "~/types/technology";
 import BaseButton from "~/components/common/BaseButton.vue";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import {Project} from "~/types/project";
 
 const props = defineProps<{
-  title: string,
-  description: string,
-  technologies: Technology[],
-  imagePath: string,
-  date: string,
+  project : Project,
+  canGoNext: boolean,
+  canGoBack: boolean
 }>()
 
-const imageUrl = new URL(props.imagePath, import.meta.url)
+const goTo = (link: string) => {
+  window.open(link, '_blank');
+}
+const emit = defineEmits(['back', 'next'])
+const onBackClick = () => {
+  if(props.canGoBack) emit('back')
+}
+const onNextClick = () => {
+  if(props.canGoNext) emit('next')
+}
 </script>
 
 <template>
@@ -21,23 +28,23 @@ const imageUrl = new URL(props.imagePath, import.meta.url)
       <FontAwesomeIcon icon="fa solid fa-xmark" />
     </div>
     <div class="carrousel_img-container">
-      <img :src="imagePath" :alt="title">
+      <img :src="project.ImagePath" :alt="project.Name">
     </div>
     <div class="carrousel_content">
-      <span class="carrousel_title">{{ title }}</span>
-      <span>{{ date }}</span>
-      <span class="carrousel_description">{{ description }}</span>
+      <span class="carrousel_title">{{ project.Name }}</span>
+      <span>{{ project.Dates }}</span>
+      <span class="carrousel_description">{{ project.Description }}</span>
     </div>
     <div class="carrousel_tags">
-      <BaseTag v-for="technology in technologies" :label="technology" />
+      <BaseTag v-for="technology in project.Technologies" :label="technology" />
     </div>
     <div class="carrousel_buttons">
-      <BaseButton label="Github" class="carrousel_button" />
-      <BaseButton label="Website" class="carrousel_button" />
+      <BaseButton label="Github" class="carrousel_button" @click="goTo(project.Github)" />
+      <BaseButton v-if="project.Website !== undefined" label="Website" class="carrousel_button" @click="goTo(project.Website)" />
     </div>
     <div class="carrousel_navigations">
-      <BaseButton class="carrousel_nav-button" label="<" />
-      <BaseButton class="carrousel_nav-button" label=">" />
+      <BaseButton class="carrousel_nav-button" label="<" @click="onBackClick" :disabled="!canGoBack" />
+      <BaseButton class="carrousel_nav-button" label=">" @click="onNextClick" :disabled="!canGoNext" />
     </div>
   </div>
 </template>

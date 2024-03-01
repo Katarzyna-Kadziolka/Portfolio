@@ -10,9 +10,6 @@ const props = defineProps<{
   imagePath: string,
 }>()
 
-const imageUrl = new URL(props.imagePath, import.meta.url)
-
-
 </script>
 
 <template>
@@ -25,7 +22,7 @@ const imageUrl = new URL(props.imagePath, import.meta.url)
       <span>{{description}}</span>
       <hr>
       <div class="gallery-card_tags">
-        <BaseTag v-for="technology in technologies" :label="technology" @click="console.log(imageUrl)" />
+        <BaseTag v-for="technology in technologies" :label="technology" />
       </div>
     </div>
   </div>

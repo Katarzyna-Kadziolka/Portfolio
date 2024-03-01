@@ -42,19 +42,29 @@ const filteredProjects = computed(() => {
 })
 
 const dialog = ref<HTMLDialogElement>()
-const activeProject = ref<Project>({
-  Dates: "",
-  ImagePath: "",
-  Description: "",
-  MainTechnologies: [],
-  Name: "",
-  MiniImagePath: "",
-  ShortDescription: "",
-  Technologies: []
+
+const index = ref<number>(0)
+const activeProject = computed(() => {
+  return filteredProjects.value[index.value];
 })
 
+const onBack = () => {
+  index.value = index.value - 1;
+}
+
+const onNext = () => {
+  index.value = index.value + 1;
+}
+
+const canGoBack = computed(() => {
+  return index.value>0;
+})
+
+const canGoNext = computed(() => {
+  return index.value<filteredProjects.value.length - 1
+})
 const showProject = (project: Project) => {
-  activeProject.value = project;
+  index.value = filteredProjects.value.findIndex((x) => x === project);
   if (dialog.value) dialog.value.showModal();
 }
 
@@ -80,9 +90,8 @@ const closeProject = () => {
     </div>
   </div>
   <dialog ref="dialog">
-    <Carrousel class="projects_carousel" :date="activeProject.Dates" :description="activeProject.Description"
-               :image-path="activeProject.ImagePath" :technologies="activeProject.Technologies"
-               :title="activeProject.Name" @close="closeProject"/>
+    <Carrousel class="projects_carousel" :project="activeProject" :can-go-back="canGoBack"
+               :can-go-next="canGoNext" @close="closeProject" @back="onBack" @next="onNext"/>
   </dialog>
 </template>
 

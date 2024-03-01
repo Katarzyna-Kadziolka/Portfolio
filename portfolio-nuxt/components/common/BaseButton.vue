@@ -1,11 +1,14 @@
 <script setup lang="ts">
-defineProps<{
-  label: string
-}>()
+const props = withDefaults(defineProps<{
+  label: string,
+  disabled: boolean
+}>(), {
+  disabled: false,
+})
 </script>
 
 <template>
-  <div class="base-button_container">
+  <div class="base-button_container" :style="[disabled ? 'opacity: 25%; cursor: default' : '']">
     <span><b>{{label}}</b></span>
   </div>
 </template>
