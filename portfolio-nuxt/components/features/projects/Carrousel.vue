@@ -20,6 +20,20 @@ const onBackClick = () => {
 const onNextClick = () => {
   if(props.canGoNext) emit('next')
 }
+
+onMounted(() => {
+  window.addEventListener("keydown", onKeyDown)
+})
+onUnmounted(() => {
+  window.removeEventListener("keydown", onKeyDown)
+})
+
+const onKeyDown = (event: KeyboardEvent) => {
+  if(event.key === "Escape") emit('close');
+  if(event.key === "ArrowRight" && props.canGoNext) emit('next');
+  if(event.key === "ArrowLeft" && props.canGoBack) emit('back');
+}
+
 </script>
 
 <template>
@@ -55,10 +69,13 @@ img {
 .carrousel {
   &_container {
     background: rgba(57, 57, 67, 0.95);
-    height: 100vh;
-    width: 100vw;
+    max-width: 100%;
+    max-height: 100%;
     display: flex;
     flex-direction: column;
+    @media (max-width: 768px) {
+      overflow: auto;
+    }
   }
   &_img-container {
     height: 50vh;
@@ -67,10 +84,16 @@ img {
     display: flex;
     justify-content: center;
     padding: 8px;
+    @media (max-width: 768px) {
+      height: 5000px;
+    }
   }
   &_img {
     height: 100%;
     width: auto;
+    @media (max-width: 768px) {
+      height: 400px;
+    }
   }
   &_title {
     font-size: 2rem;
@@ -78,7 +101,11 @@ img {
   &_content {
     display: flex;
     flex-direction: column;
-    padding: 16px 64px 16px 64px;
+    padding: 16px 64px;
+    row-gap: 8px;
+    @media (max-width: 768px) {
+      padding: 8px 16px;
+    }
   }
   &_description {
     font-size: 1.5rem;
@@ -86,12 +113,18 @@ img {
   &_tags {
     display: flex;
     column-gap: 16px;
-    padding: 16px 64px 16px 64px;
+    padding: 16px 64px;
+    @media (max-width: 768px) {
+      padding: 8px 16px;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 16px;
+    }
   }
   &_buttons {
     display: flex;
     justify-content: center;
-    padding: 16px 64px 16px 64px;
+    padding: 16px 64px;
     column-gap: 16px;
   }
   &_button {
