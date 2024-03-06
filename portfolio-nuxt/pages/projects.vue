@@ -41,7 +41,7 @@ const filteredProjects = computed(() => {
   });
 })
 
-const dialog = ref<HTMLDialogElement>()
+const showCarrousel = ref<boolean>(false);
 
 const index = ref<number>(0)
 const activeProject = computed(() => {
@@ -57,19 +57,24 @@ const onNext = () => {
 }
 
 const canGoBack = computed(() => {
-  return index.value>0;
+  return index.value > 0;
 })
 
 const canGoNext = computed(() => {
-  return index.value<filteredProjects.value.length - 1
+  return index.value < filteredProjects.value.length - 1
+})
+
+watch(showCarrousel, (newValue) => {
+  if (newValue) document.body.style.overflow = 'hidden'
+  else document.body.style.overflow = 'auto'
 })
 const showProject = (project: Project) => {
   index.value = filteredProjects.value.findIndex((x) => x === project);
-  if (dialog.value) dialog.value.showModal();
+  showCarrousel.value = true;
 }
 
 const closeProject = () => {
-  if (dialog.value) dialog.value.close();
+  showCarrousel.value = false;
 }
 
 </script>
@@ -89,26 +94,11 @@ const closeProject = () => {
           class="projects_gallery-card"/>
     </div>
   </div>
-  <dialog ref="dialog">
-    <Carrousel class="projects_carousel" :project="activeProject" :can-go-back="canGoBack"
-               :can-go-next="canGoNext" @close="closeProject" @back="onBack" @next="onNext"/>
-  </dialog>
+  <Carrousel v-show="showCarrousel" :class="{'projects_carrousel-visible': showCarrousel}" :project="activeProject"
+             :can-go-back="canGoBack" :can-go-next="canGoNext" @close="closeProject" @back="onBack" @next="onNext"/>
 </template>
 
 <style scoped lang="scss">
-dialog {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 3px solid $nav-secondary;
-  border-radius: 15px;
-
-  &::backdrop {
-    background: $nav-primary;
-    opacity: 75%;
-  }
-}
 
 .projects {
   &_container {
@@ -142,5 +132,18 @@ dialog {
     font-size: 1.5rem;
   }
 
+  &_carrousel-visible {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  &_overflow-hidden {
+    overflow: hidden;
+  }
 }
 </style>

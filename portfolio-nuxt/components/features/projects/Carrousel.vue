@@ -13,7 +13,7 @@ const props = defineProps<{
 const goTo = (link: string) => {
   window.open(link, '_blank');
 }
-const emit = defineEmits(['back', 'next'])
+const emit = defineEmits(['back', 'next', 'close'])
 const onBackClick = () => {
   if(props.canGoBack) emit('back')
 }
@@ -28,7 +28,11 @@ const onNextClick = () => {
       <FontAwesomeIcon icon="fa solid fa-xmark" />
     </div>
     <div class="carrousel_img-container">
-      <img :src="project.ImagePath" :alt="project.Name">
+      <img class="carrousel_img" :src="project.ImagePath" :alt="project.Name">
+    </div>
+    <div class="carrousel_navigations">
+      <BaseButton class="carrousel_nav-button" label="<" @click="onBackClick" :disabled="!canGoBack" />
+      <BaseButton class="carrousel_nav-button" label=">" @click="onNextClick" :disabled="!canGoNext" />
     </div>
     <div class="carrousel_content">
       <span class="carrousel_title">{{ project.Name }}</span>
@@ -39,12 +43,8 @@ const onNextClick = () => {
       <BaseTag v-for="technology in project.Technologies" :label="technology" />
     </div>
     <div class="carrousel_buttons">
-      <BaseButton label="Github" class="carrousel_button" @click="goTo(project.Github)" />
-      <BaseButton v-if="project.Website !== undefined" label="Website" class="carrousel_button" @click="goTo(project.Website)" />
-    </div>
-    <div class="carrousel_navigations">
-      <BaseButton class="carrousel_nav-button" label="<" @click="onBackClick" :disabled="!canGoBack" />
-      <BaseButton class="carrousel_nav-button" label=">" @click="onNextClick" :disabled="!canGoNext" />
+      <BaseButton label="Github" class="carrousel_button" @click="goTo(project.Github)" :disabled="false" />
+      <BaseButton v-if="project.Website !== undefined" label="Website" class="carrousel_button" @click="goTo(project.Website)" :disabled="false" />
     </div>
   </div>
 </template>
@@ -54,17 +54,23 @@ img {
 }
 .carrousel {
   &_container {
-    background: $nav-primary;
-    width: 90vw;
-    height: 90vh;
+    background: rgba(57, 57, 67, 0.95);
+    height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
   }
   &_img-container {
-    height: 50%;
+    height: 50vh;
     width: 100%;
     overflow: hidden;
-    border-bottom: 3px solid $nav-secondary;
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+  }
+  &_img {
+    height: 100%;
+    width: auto;
   }
   &_title {
     font-size: 2rem;
@@ -72,22 +78,21 @@ img {
   &_content {
     display: flex;
     flex-direction: column;
-    padding: 16px;
-    row-gap: 8px;
+    padding: 16px 64px 16px 64px;
   }
   &_description {
     font-size: 1.5rem;
   }
   &_tags {
     display: flex;
-    column-gap: 8px;
-    padding: 16px;
+    column-gap: 16px;
+    padding: 16px 64px 16px 64px;
   }
   &_buttons {
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    row-gap: 8px;
+    justify-content: center;
+    padding: 16px 64px 16px 64px;
+    column-gap: 16px;
   }
   &_button {
     width: 150px;
@@ -97,9 +102,10 @@ img {
     flex-direction: row;
     justify-content: space-between;
     padding: 16px;
-    margin-top: auto;
+    font-size: 2rem;
   }
   &_nav-button {
+    padding: 16px;
     width: 25px;
   }
   &_exit-button {
