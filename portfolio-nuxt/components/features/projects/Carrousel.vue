@@ -84,15 +84,17 @@ img {
     display: flex;
     justify-content: center;
     padding: 8px;
-    @media (max-width: 768px) {
-      height: 5000px;
+
+    img {
+      height: auto;
+      width: 100%;
+      max-height: 100%;
+      object-fit: contain;
     }
-  }
-  &_img {
-    height: 100%;
-    width: auto;
+
     @media (max-width: 768px) {
-      height: 400px;
+      height: 50vh;
+      width: 100%;
     }
   }
   &_title {
