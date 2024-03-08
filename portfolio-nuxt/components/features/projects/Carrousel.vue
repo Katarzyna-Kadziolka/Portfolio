@@ -63,8 +63,12 @@ const onKeyDown = (event: KeyboardEvent) => {
 
 <style scoped lang="scss">
 img {
+  padding-top: 16px;
   height: 50vh;
   object-fit: contain;
+  @media (max-width: 768px) {
+    padding-top: 0;
+  }
 }
 .carrousel {
   &_container {
