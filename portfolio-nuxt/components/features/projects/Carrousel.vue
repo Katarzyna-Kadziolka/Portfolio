@@ -41,9 +41,7 @@ const onKeyDown = (event: KeyboardEvent) => {
     <div class="carrousel_exit-button" @click="$emit('close')">
       <FontAwesomeIcon icon="fa solid fa-xmark" />
     </div>
-    <div class="carrousel_img-container">
-      <img class="carrousel_img" :src="project.ImagePath" :alt="project.Name">
-    </div>
+    <img :src="project.ImagePath" :alt="project.Name">
     <div class="carrousel_navigations">
       <BaseButton class="carrousel_nav-button" label="<" @click="onBackClick" :disabled="!canGoBack" />
       <BaseButton class="carrousel_nav-button" label=">" @click="onNextClick" :disabled="!canGoNext" />
@@ -65,6 +63,8 @@ const onKeyDown = (event: KeyboardEvent) => {
 
 <style scoped lang="scss">
 img {
+  height: 50vh;
+  object-fit: contain;
 }
 .carrousel {
   &_container {
@@ -75,26 +75,6 @@ img {
     flex-direction: column;
     @media (max-width: 768px) {
       overflow: auto;
-    }
-  }
-  &_img-container {
-    height: 50vh;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    padding: 8px;
-
-    img {
-      height: auto;
-      width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
-
-    @media (max-width: 768px) {
-      height: 50vh;
-      width: 100%;
     }
   }
   &_title {
