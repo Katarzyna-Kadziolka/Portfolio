@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import {Certificate} from "~/types/certificate";
 import BaseButton from "~/components/common/BaseButton.vue";
+import {Certificate} from "~/types/certificate";
 
 const props = defineProps<{
   certificate: Certificate
 }>()
 
 const goTo = () => {
-  window.open(props.certificate.Certificate, '_blank');
+  window.open(props.certificate.Url, '_blank');
 }
 </script>
 
@@ -15,10 +15,11 @@ const goTo = () => {
   <div class="single-certificate_container">
     <img :src="certificate.ImagePath" :alt="certificate.Name">
     <hr>
-    <span class="single-certificate_name">{{certificate.Name}}</span>
-    <span>{{certificate.Date}}</span>
-    <span>{{certificate.Description}}</span>
-    <BaseButton class="single-certificate_button" label="Show certificate" :disabled="false" @click="goTo" />
+    <span class="single-certificate_name">{{ certificate.Name }}</span>
+    <span>{{ certificate.Date }}</span>
+    <span>{{ certificate.Description }}</span>
+    <BaseButton v-if="certificate.Url" class="single-certificate_button" label="Show certificate"
+                :disabled="false" @click="goTo"/>
   </div>
 </template>
 
@@ -30,19 +31,23 @@ img {
   padding-bottom: 16px;
   align-self: start;
 }
+
 hr {
   width: 100%;
 
 }
+
 .single-certificate {
   &_container {
     display: flex;
     flex-direction: column;
     row-gap: 8px;
   }
+
   &_name {
     font-size: 2rem;
   }
+
   &_button {
     width: 50%;
     margin-top: auto;

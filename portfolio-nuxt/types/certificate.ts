@@ -4,5 +4,5 @@ export interface Certificate {
     Organization: string,
     Description: string,
     ImagePath: string,
-    Certificate: string | undefined
+    Url: string | undefined
 }
