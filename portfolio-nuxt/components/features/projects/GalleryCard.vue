@@ -10,15 +10,12 @@ const props = defineProps<{
   imagePath: string,
 }>()
 
-const imageUrl = new URL(props.imagePath, import.meta.url)
-
-
 </script>
 
 <template>
   <div class="gallery-card_container">
     <div class="gallery-card_img-container">
-      <img :src="imageUrl" :alt="title" class="gallery-card_img">
+      <img :src="imagePath" :alt="title" class="gallery-card_img">
     </div>
     <div class="gallery-card_content">
       <span class="gallery-card_title"><b>{{title}}</b></span>

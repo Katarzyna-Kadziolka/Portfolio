@@ -8,5 +8,7 @@ export interface Project {
     MiniImagePath: string,
     ImagePath: string,
     Technologies: Technology[],
-    MainTechnologies: Technology[]
+    MainTechnologies: Technology[],
+    Github: string,
+    Website: string | undefined
 }

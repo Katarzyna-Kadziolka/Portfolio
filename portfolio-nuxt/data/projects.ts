@@ -54,7 +54,9 @@ export const projects : Project[] = [
         ImagePath: doskvolTools,
         MiniImagePath: doskvolToolsMini,
         Technologies: [Technology.Vue, Technology.TypeScript, Technology.Html, Technology.Scss, Technology.Git, Technology.WebStorm],
-        MainTechnologies: [Technology.Vue, Technology.TypeScript]
+        MainTechnologies: [Technology.Vue, Technology.TypeScript],
+        Github: "https://github.com/Katarzyna-Kadziolka/DoskvolTools",
+        Website: "https://katarzyna-kadziolka.github.io/DoskvolTools/generator/street"
     },
     {
         Name: "Manage Me",
@@ -64,7 +66,9 @@ export const projects : Project[] = [
         ImagePath: manageMe,
         MiniImagePath: manageMeMini,
         Technologies: [Technology.Angular, Technology.TypeScript, Technology.Html, Technology.Scss, Technology.Git, Technology.VisualStudioCode],
-        MainTechnologies: [Technology.Angular, Technology.TypeScript]
+        MainTechnologies: [Technology.Angular, Technology.TypeScript],
+        Github: "https://github.com/Katarzyna-Kadziolka/ManageMe",
+        Website: undefined
     },
     {
         Name: "Fantasy Odyssey",
@@ -74,7 +78,9 @@ export const projects : Project[] = [
         ImagePath: fantasyOdyssey,
         MiniImagePath: fantasyOdysseyMini,
         Technologies: [Technology.Dart, Technology.Flutter, Technology.GoogleFit, Technology.Firebase, Technology.GoogleCloud, Technology.Git, Technology.AndroidStudio],
-        MainTechnologies: [Technology.Dart, Technology.Flutter]
+        MainTechnologies: [Technology.Dart, Technology.Flutter],
+        Github: "https://github.com/Katarzyna-Kadziolka/FantasyOdyssey",
+        Website: undefined
     },
     {
         Name: "StabilityClient.Net",
@@ -84,7 +90,9 @@ export const projects : Project[] = [
         ImagePath: stabilityClient,
         MiniImagePath: stabilityClientMini,
         Technologies: [Technology.Csharp, Technology.DotNet, Technology.Grpc, Technology.StabilityAi, Technology.Git, Technology.Rider],
-        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.Grpc]
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.Grpc],
+        Github: "https://github.com/Katarzyna-Kadziolka/StabilityClient.Net",
+        Website: "https://www.nuget.org/packages/StabilityClient.Net/"
     },
     {
         Name: "Wild Alert",
@@ -94,7 +102,9 @@ export const projects : Project[] = [
         ImagePath: wildAlertApp,
         MiniImagePath: wildAlertAppMini,
         Technologies: [Technology.Vue, Technology.TypeScript, Technology.Html, Technology.Scss, Technology.Quasar, Technology.Csharp, Technology.DotNet, Technology.Git, Technology.Rider, Technology.VisualStudioCode],
-        MainTechnologies: [Technology.Vue, Technology.TypeScript]
+        MainTechnologies: [Technology.Vue, Technology.TypeScript],
+        Github: "https://github.com/MossPiglets/WildAlertApp",
+        Website: "https://mosspiglets.github.io/WildAlertApp/"
     },
     {
         Name: "CityWellApp",
@@ -104,7 +114,9 @@ export const projects : Project[] = [
         ImagePath: cityWellApp,
         MiniImagePath: cityWellAppMini,
         Technologies: [Technology.Vue, Technology.JavaScript, Technology.Html, Technology.Css, Technology.Git, Technology.VisualStudioCode],
-        MainTechnologies: [Technology.Vue, Technology.JavaScript]
+        MainTechnologies: [Technology.Vue, Technology.JavaScript],
+        Github: "https://github.com/Spiace-Wydry/CityWellApp",
+        Website: "https://spiace-wydry.github.io/CityWellApp/"
     },
     {
         Name: "CthulhuWizardApp",
@@ -114,7 +126,9 @@ export const projects : Project[] = [
         ImagePath: cthulhuWizard,
         MiniImagePath: cthulhuWizardMini,
         Technologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.Cqrs, Technology.RavenDb, Technology.NoSql, Technology.Docker, Technology.TypeScript, Technology.Vue, Technology.Html, Technology.Scss, Technology.Quasar, Technology.AtomicDesign, Technology.Heroku, Technology.Git, Technology.Rider, Technology.WebStorm],
-        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.Vue, Technology.TypeScript]
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.Vue, Technology.TypeScript],
+        Github: "https://github.com/Katarzyna-Kadziolka/CthulhuWizardApp",
+        Website: "https://cthulhu-wizard.herokuapp.com/wizard"
     },
     {
         Name: "WizardWorldDesktop",
@@ -124,7 +138,9 @@ export const projects : Project[] = [
         ImagePath: wizardWorldDesktop,
         MiniImagePath: wizardWorldDesktopMini,
         Technologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf, Technology.Mvvm, Technology.Git, Technology.Rider],
-        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf]
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf],
+        Github: "https://github.com/Katarzyna-Kadziolka/WizardWorldDeskop",
+        Website: undefined
     },
     {
         Name: "WizardWorldApp",
@@ -134,7 +150,9 @@ export const projects : Project[] = [
         ImagePath: wizardWorldApp,
         MiniImagePath: wizardWorldAppMini,
         Technologies: [Technology.Csharp, Technology.DotNet, Technology.Blazor, Technology.Git, Technology.Rider],
-        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.Blazor]
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.Blazor],
+        Github: "https://github.com/Katarzyna-Kadziolka/WizardWorldApp",
+        Website: "https://katarzyna-kadziolka.github.io/WizardWorldApp/"
     },
     {
         Name: "Town Bestiary",
@@ -144,7 +162,9 @@ export const projects : Project[] = [
         ImagePath: townBestiary,
         MiniImagePath: townBestiaryMini,
         Technologies: [Technology.Csharp, Technology.DotNet, Technology.Git, Technology.Rider],
-        MainTechnologies: [Technology.Csharp, Technology.DotNet]
+        MainTechnologies: [Technology.Csharp, Technology.DotNet],
+        Github: "https://github.com/DzordzoMen/town-bestiary",
+        Website: "https://dzordzomen.github.io/town-bestiary/cards"
     },
     {
         Name: "Raindrop",
@@ -154,17 +174,21 @@ export const projects : Project[] = [
         ImagePath: rainDrop,
         MiniImagePath: rainDropMini,
         Technologies: [Technology.Vue, Technology.JavaScript, Technology.Html, Technology.Css, Technology.Git, Technology.VisualStudioCode],
-        MainTechnologies: [Technology.Vue, Technology.JavaScript]
+        MainTechnologies: [Technology.Vue, Technology.JavaScript],
+        Github: "https://github.com/DzordzoMen/raindrop",
+        Website: "https://dzordzomen.github.io/raindrop/"
     },
     {
         Name: "WizardWorldAPI",
         Dates: "10.2021-02.2022",
-        ShortDescription: "Rest API returning data from the Harry Potter universe, which already has over 1 750 000 connections.",
+        ShortDescription: "Rest API returning data from the Harry Potter universe, which already has over 2 300 000 connections.",
         Description: "Rest API written using the CQRS template, with unit tests and integration tests. Returns data from the Harry Potter universe and allows anonymous feedback via email.",
         ImagePath: wizardWorldApi,
         MiniImagePath: wizardWorldApiMini,
         Technologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.Cqrs, Technology.PostgreSql, Technology.Sql, Technology.SendGrid, Technology.Heroku, Technology.Rider],
-        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet]
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet],
+        Github: "https://github.com/MossPiglets/WizardWorldAPI",
+        Website: "https://wizard-world-api.herokuapp.com/swagger/index.html"
     },
     {
         Name: "MediatR.AspNet",
@@ -174,7 +198,9 @@ export const projects : Project[] = [
         ImagePath: mediatRAspNet,
         MiniImagePath: mediatRAspNet,
         Technologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.Cqrs, Technology.Git, Technology.Rider],
-        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet]
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet],
+        Github: "https://github.com/MossPiglets/MediatR.AspNet",
+        Website: "https://www.nuget.org/packages/MediatR.AspNet/"
     },
     {
         Name: "Urania",
@@ -184,7 +210,9 @@ export const projects : Project[] = [
         ImagePath: urania,
         MiniImagePath: urania,
         Technologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf, Technology.Mvvm, Technology.Git, Technology.VisualStudio],
-        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf]
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf],
+        Github: "https://github.com/MossPiglets/Urania",
+        Website: undefined
     },
     {
         Name: "Witcher Tools",
@@ -194,7 +222,9 @@ export const projects : Project[] = [
         ImagePath: witcherApi,
         MiniImagePath: witcherApiMini,
         Technologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.MongoDb, Technology.Azure, Technology.Git, Technology.VisualStudio],
-        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet]
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet],
+        Github: "https://github.com/Katarzyna-Kadziolka/WitcherTools",
+        Website: "https://witcherapi.azurewebsites.net/index.html"
     },
     {
         Name: "Portfolio",
@@ -204,7 +234,9 @@ export const projects : Project[] = [
         ImagePath: portfolio,
         MiniImagePath: portfolioMini,
         Technologies: [Technology.Csharp, Technology.DotNet, Technology.Blazor, Technology.Html, Technology.Css, Technology.Git, Technology.Rider],
-        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.Blazor]
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.Blazor],
+        Github: "https://github.com/Katarzyna-Kadziolka/Portfolio",
+        Website: undefined
     },
     {
         Name: "HerokuDbConnector",
@@ -214,7 +246,9 @@ export const projects : Project[] = [
         ImagePath: herokuDbConnector,
         MiniImagePath: herokuDbConnector,
         Technologies: [Technology.Csharp, Technology.DotNet, Technology.PostgreSql, Technology.Heroku, Technology.Git, Technology.Rider],
-        MainTechnologies: [Technology.Csharp, Technology.DotNet]
+        MainTechnologies: [Technology.Csharp, Technology.DotNet],
+        Github: "https://github.com/Katarzyna-Kadziolka/HerokuDbConnector",
+        Website: "https://www.nuget.org/packages/HerokuDbConnector/"
     },
     {
         Name: "Athena",
@@ -224,7 +258,9 @@ export const projects : Project[] = [
         ImagePath: athena,
         MiniImagePath: athenaMini,
         Technologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf, Technology.Mvvm, Technology.Git, Technology.VisualStudio],
-        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf]
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf],
+        Github: "https://github.com/MossPiglets/Athena",
+        Website: undefined
     },
     {
         Name: "CatFacts.Net",
@@ -234,7 +270,9 @@ export const projects : Project[] = [
         ImagePath: catFacts,
         MiniImagePath: catFacts,
         Technologies: [Technology.Csharp, Technology.DotNet, Technology.Git, Technology.VisualStudio],
-        MainTechnologies: [Technology.Csharp, Technology.DotNet]
+        MainTechnologies: [Technology.Csharp, Technology.DotNet],
+        Github: "https://github.com/Katarzyna-Kadziolka/CatFacts.Net",
+        Website: "https://www.nuget.org/packages/CatFacts.Net/#readme-body-tab"
     },
     {
         Name: "Time Library",
@@ -244,7 +282,9 @@ export const projects : Project[] = [
         ImagePath: timeLibrary,
         MiniImagePath:timeLibraryMini,
         Technologies: [Technology.Csharp, Technology.DotNet, Technology.Git, Technology.VisualStudio],
-        MainTechnologies: [Technology.Csharp, Technology.DotNet]
+        MainTechnologies: [Technology.Csharp, Technology.DotNet],
+        Github: "https://github.com/Katarzyna-Kadziolka/TimeLibrary",
+        Website: undefined
     },
     {
         Name: "Printy",
@@ -254,7 +294,9 @@ export const projects : Project[] = [
         ImagePath: printy,
         MiniImagePath:printyMini,
         Technologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.Git, Technology.VisualStudio],
-        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet]
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet],
+        Github: "https://github.com/Morasiu/PrintyAPI",
+        Website: undefined
     },
     {
         Name: "Chronos",
@@ -264,7 +306,9 @@ export const projects : Project[] = [
         ImagePath: chronos,
         MiniImagePath:chronosMini,
         Technologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.Git, Technology.VisualStudio],
-        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet]
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet],
+        Github: "https://github.com/Katarzyna-Kadziolka/Chronos",
+        Website: undefined
     },
     {
         Name: "Cerebri",
@@ -274,7 +318,9 @@ export const projects : Project[] = [
         ImagePath: cerebri,
         MiniImagePath:cerebri,
         Technologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf, Technology.Git, Technology.VisualStudio],
-        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf]
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.Wpf],
+        Github: "https://github.com/Katarzyna-Kadziolka/Cerebri",
+        Website: undefined
     },
     {
         Name: "Cthulhu Character Wizard",
@@ -284,6 +330,8 @@ export const projects : Project[] = [
         ImagePath: cthulhuCreator,
         MiniImagePath:cthulhuCreatorMini,
         Technologies: [Technology.Python, Technology.TkInter, Technology.Git, Technology.VisualStudioCode],
-        MainTechnologies: [Technology.Python, Technology.TkInter]
+        MainTechnologies: [Technology.Python, Technology.TkInter],
+        Github: "https://github.com/Katarzyna-Kadziolka/Cthulhu-character-wizard",
+        Website: undefined
     }
 ]
