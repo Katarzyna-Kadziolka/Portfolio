@@ -1,5 +1,3 @@
-import {Technology} from "~/types/technology";
-
 export interface Certificate {
     Name: string,
     Date: string,

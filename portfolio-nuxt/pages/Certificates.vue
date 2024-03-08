@@ -1,22 +1,26 @@
 <script setup lang="ts">
 import {certificates} from "~/data/certificates"
 import ListItem from "~/components/features/certificates/ListItem.vue";
+import SingleCertificate from "~/components/features/certificates/SingleCertificate.vue";
 
 const activeCertificateName = ref(certificates[0].Name)
 const onChangeActiveCertificate = (activeName: string) => {
   activeCertificateName.value = activeName
 }
+const activeCertificate = computed(() => {
+  return certificates.find((certificate) => certificate.Name === activeCertificateName.value)
+})
 
 </script>
 
 <template>
   <div class="certificates_container">
     <div>
-      <ListItem v-for="certificate in certificates" :key="certificate" :name="certificate.Name" :organization="certificate.Organization" :active="certificate.Name === activeCertificateName" @changeActiveCertificate="onChangeActiveCertificate"/>
+      <ListItem v-for="certificate in certificates" :key="certificate" :name="certificate.Name"
+                :organization="certificate.Organization" :active="certificate.Name === activeCertificateName"
+                @changeActiveCertificate="onChangeActiveCertificate"/>
     </div>
-    <div>
-      Single certificate
-    </div>
+    <SingleCertificate class="certificates_single-certificate" :certificate="activeCertificate"/>
   </div>
 </template>
 
@@ -32,6 +36,9 @@ const onChangeActiveCertificate = (activeName: string) => {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr;
     }
+  }
+  &_single-certificate {
+    max-height: 80vh;
   }
 }
 </style>

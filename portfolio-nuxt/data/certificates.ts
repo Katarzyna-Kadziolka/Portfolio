@@ -1,7 +1,7 @@
 import {Certificate} from "~/types/certificate";
-import intelScholarshipAlumni from "~/assets/images/intelScholarshipAlumni.png"
+import intel from "~/assets/images/intel.svg"
 import securityFundamentals from "assets/documents/SecurityFundamentals.pdf"
-import microsoft from "~/assets/images/microsoft.png"
+import microsoft from "~/assets/images/microsoft.svg"
 import vueMastery from "~/assets/images/vueMastery.png"
 import strefaKursow from "~/assets/images/strefaKursow.svg"
 import softwareDevelopmentFundamentals from "~/assets/documents/SoftwareDevelopmentFundamentals.pdf"
@@ -15,7 +15,7 @@ export const certificates : Certificate[] = [
         Date: "06.2023",
         Description: "Intel Scholarship Alumni through the program develop knowledge and skills related to the ICT world and create strategy for building future careers. Thanks to that Alumni are aware of their talents and thus increases their confidence and motivation to achieve goals. In addition to that they enriched their knowledge in the area of new technologies, innovations, processes and tools.",
         Organization: "Intel",
-        ImagePath: intelScholarshipAlumni
+        ImagePath: intel
     },
     {
         Name: "Vue 3 Advanced",
