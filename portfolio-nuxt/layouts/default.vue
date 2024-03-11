@@ -43,7 +43,7 @@ onBeforeUnmount(() => {
       <NavButton label="Projects" icon="fa-solid fa-laptop-code" link="/Projects" :class="[route.path === '/Projects' ? 'default_active' : '']"/>
       <NavButton label="Achievements" icon="fa-solid fa-star" link="/Achievements" :class="[route.path === '/Achievements' ? 'default_active' : '']"/>
       <NavButton label="Certificates" icon="fa-solid fa-book" link="/Certificates" :class="[route.path === '/Certificates' ? 'default_active' : '']"/>
-      <NavButton label="Time line" icon="fa-solid fa-timeline" link="/TimeLine" :class="[route.path === '/TimeLine' ? 'default_active' : '']"/>
+      <NavButton label="Timeline" icon="fa-solid fa-timeline" link="/TimeLine" :class="[route.path === '/TimeLine' ? 'default_active' : '']"/>
     </div>
 
     <div class="default_buttons" v-else>
@@ -58,7 +58,7 @@ onBeforeUnmount(() => {
     <NavButton label="Projects" icon="fa-solid fa-laptop-code" link="/Projects" :class="[route.path === '/Projects' ? 'default_active' : '']"/>
     <NavButton label="Achievements" icon="fa-solid fa-star" link="/Achievements" :class="[route.path === '/Achievements' ? 'default_active' : '']"/>
     <NavButton label="Certificates" icon="fa-solid fa-book" link="/Certificates" :class="[route.path === '/Certificates' ? 'default_active' : '']"/>
-    <NavButton label="Time line" icon="fa-solid fa-timeline" link="/TimeLine" :class="[route.path === '/TimeLine' ? 'default_active' : '']"/>
+    <NavButton label="Timeline" icon="fa-solid fa-timeline" link="/TimeLine" :class="[route.path === '/TimeLine' ? 'default_active' : '']"/>
   </div>
   <div v-show="!showMobileMenu" class="default_slot">
     <slot/>
