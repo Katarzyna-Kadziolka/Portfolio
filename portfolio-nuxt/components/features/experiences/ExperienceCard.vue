@@ -18,16 +18,18 @@ const showMore = ref<boolean>(false);
       <span>{{ experience.Dates }}</span>
       <span class="experience-card_company-sector">{{ experience.CompanySector }}</span>
     </div>
-    <div v-if="showMore" class="experience-card_details-container">
-      <hr>
-      <div class="experience-card_details">
-        <span>{{ experience.Description }}</span>
-        <img :src="experience.Image" :alt="experience.CompanyName">
+    <Transition appear>
+      <div v-show="showMore" class="experience-card_details-container">
+        <hr>
+        <div class="experience-card_details">
+          <span>{{ experience.Description }}</span>
+          <img :src="experience.Image" :alt="experience.CompanyName">
+        </div>
+        <div class="experience-card_tags">
+          <BaseTag v-for="technology in experience.Technologies" :label="technology"/>
+        </div>
       </div>
-      <div class="experience-card_tags">
-        <BaseTag v-for="technology in experience.Technologies" :label="technology"/>
-      </div>
-    </div>
+    </Transition>
   </div>
 </template>
 
@@ -38,11 +40,25 @@ img {
   @media (max-width: 768px) {
   }
 }
+
 hr {
   width: 100%;
 }
 
+.v-enter-active,
+.v-leave-active {
+  transition: max-height .5s;
+  max-height: 500px;
+}
+
+.v-enter-from,
+.v-leave-to {
+  max-height: 0px;
+  overflow: hidden;
+}
+
 .experience-card {
+
   &_container {
     padding: 8px 16px;
     border: 2px solid $primary;
@@ -92,6 +108,7 @@ hr {
   &_details {
     display: flex;
     column-gap: 8px;
+    padding-top: 8px;
   }
 }
 </style>
