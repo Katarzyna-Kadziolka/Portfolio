@@ -42,5 +42,6 @@ export enum Technology {
     Azure = 'Azure',
     Grpc = 'gRPC',
     StabilityAi = 'Stability AI',
-    SendGrid = 'SendGrid'
+    SendGrid = 'SendGrid',
+    Ai = 'AI'
 }
