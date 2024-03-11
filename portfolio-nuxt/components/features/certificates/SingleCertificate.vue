@@ -30,6 +30,12 @@ img {
   object-fit: contain;
   padding-bottom: 16px;
   align-self: start;
+  @media (max-width: 768px) {
+    max-width: 100vw;
+    height: 50px;
+    padding-bottom: 0;
+    padding-top: 32px;
+  }
 }
 
 hr {
@@ -42,6 +48,10 @@ hr {
     display: flex;
     flex-direction: column;
     row-gap: 8px;
+    padding-right: 32px;
+    @media (max-width: 768px) {
+      padding-right: 0;
+    }
   }
 
   &_name {
@@ -52,6 +62,9 @@ hr {
     width: 50%;
     margin-top: auto;
     align-self: flex-end;
+    @media (max-width: 768px) {
+      margin-top: 16px;
+    }
   }
 }
 </style>

@@ -34,15 +34,17 @@ const activeCertificate = computed(() => {
     column-gap: 32px;
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-rows: 1fr auto;
     }
   }
   &_single-certificate {
-    height: 80vh;
-    width: 45vw;
-    position: fixed;
-    top: 95px;
-    right: 8px;
+    @media (min-width: 768px) {
+      width: 45vw;
+      position: fixed;
+      top: 95px;
+      right: 8px;
+      height: 80vh;
+    }
   }
 }
 </style>
