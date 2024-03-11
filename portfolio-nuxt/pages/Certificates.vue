@@ -38,7 +38,11 @@ const activeCertificate = computed(() => {
     }
   }
   &_single-certificate {
-    max-height: 80vh;
+    height: 80vh;
+    width: 45vw;
+    position: fixed;
+    top: 95px;
+    right: 8px;
   }
 }
 </style>
