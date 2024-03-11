@@ -1,5 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ExperienceCard from "~/components/features/experiences/ExperienceCard.vue";
+import {experiences} from "~/data/experiences"
+
+</script>
 
 <template>
-  Experience
+    <ExperienceCard v-for="experience in experiences" :experience="experience" :key="experience" />
 </template>
