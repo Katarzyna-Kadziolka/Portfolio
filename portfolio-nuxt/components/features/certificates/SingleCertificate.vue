@@ -37,10 +37,8 @@ img {
     padding-top: 32px;
   }
 }
-
 hr {
   width: 100%;
-
 }
 
 .single-certificate {
