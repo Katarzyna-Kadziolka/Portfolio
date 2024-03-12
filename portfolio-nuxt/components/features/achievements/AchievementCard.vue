@@ -18,18 +18,21 @@ defineProps<{
 
 <style scoped lang="scss">
 img {
-  width: 50px;
-  height: 50px;
+  width: 8vw;
+  height: 8vw;
 }
 .achievement-card {
   &_square {
     background: $nav-secondary;
-    width: 90px;
-    height: 90px;
+    width: 10vw;
+    height: 10vw;
     transform: rotate(45deg);
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 3px solid $primary;
+    border-radius: 5px;
+    padding: 8px;
   }
   &_square-content-wrapper {
     transform: rotate(-45deg);
