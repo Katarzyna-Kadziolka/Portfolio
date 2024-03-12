@@ -43,5 +43,9 @@ export enum Technology {
     Grpc = 'gRPC',
     StabilityAi = 'Stability AI',
     SendGrid = 'SendGrid',
-    Ai = 'AI'
+    Ai = 'AI',
+    RestApi= 'REST API',
+    EntityFramework = 'Entity Framework',
+    UnitTests = 'Unit Tests',
+    IntegrationTests = 'IntegrationTests',
 }
