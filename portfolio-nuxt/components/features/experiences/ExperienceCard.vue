@@ -14,15 +14,15 @@ const showMore = ref<boolean>(false);
   <div class="experience-card_container" @click="showMore = !showMore">
     <div class="experience-card_title-container">
       <span class="experience-card_title">{{ experience.Position }}</span>
+      <span class="experience-card_dates">{{ experience.Dates }}</span>
       <span class="experience-card_company">{{ experience.CompanyName }}</span>
-      <span>{{ experience.Dates }}</span>
       <span class="experience-card_company-sector">{{ experience.CompanySector }}</span>
     </div>
     <Transition appear>
       <div v-show="showMore" class="experience-card_details-container">
         <hr>
         <div class="experience-card_details">
-          <span>{{ experience.Description }}</span>
+          <span class="experience-card_description">{{ experience.Description }}</span>
           <img :src="experience.Image" :alt="experience.CompanyName">
         </div>
         <div class="experience-card_tags">
@@ -38,6 +38,7 @@ img {
   width: 25vh;
   object-fit: contain;
   @media (max-width: 768px) {
+    padding-bottom: 16px;
   }
 }
 
@@ -67,6 +68,9 @@ hr {
     align-self: center;
     background: $nav-primary;
     cursor: pointer;
+    @media (max-width: 768px) {
+      width: 70vw;
+    }
   }
 
   &_title-container {
@@ -74,6 +78,10 @@ hr {
     grid-template-rows: 1fr auto;
     grid-template-columns: 2fr 1fr;
     row-gap: 8px;
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &_title {
@@ -83,10 +91,18 @@ hr {
   &_company {
     font-size: 1.2rem;
     justify-self: end;
+    grid-column: 2;
+    grid-row: 1;
   }
 
   &_company-sector {
     justify-self: end;
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  &_dates {
+    grid-column: 1;
   }
 
   &_details-container {
@@ -109,6 +125,14 @@ hr {
     display: flex;
     column-gap: 8px;
     padding-top: 8px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  &_description {
+    @media (max-width: 768px) {
+      order: 1;
+    }
   }
 }
 </style>
