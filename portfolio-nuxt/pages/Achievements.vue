@@ -28,6 +28,7 @@ import AchievementCard from "~/components/features/achievements/AchievementCard.
     align-items: center;
     grid-template-columns: repeat(4, 9vw);
     grid-template-rows: repeat(3, 9vw);
+    grid-gap: 10px;
     :nth-child(1) {
       grid-row: 1;
       grid-column: 1;
