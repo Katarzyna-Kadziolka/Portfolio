@@ -1,6 +1,6 @@
 import {Achievement} from "~/types/achievement";
 import aquathon from "~/assets/images/aquathon.png"
-import hackyeah from "~/assets/images/hachyeah.png"
+import hackyeah from "~/assets/images/hackyeah.png"
 import sheep from "~/assets/images/sheep.png"
 export const achievements: Achievement[] = [
     {
