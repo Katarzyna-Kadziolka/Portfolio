@@ -3,27 +3,20 @@ import {Achievement} from "~/types/achievement";
 
 defineProps<{
   achievement: Achievement
+  isActive: boolean
 }>()
-
-const achievementDetails = ref<HTMLDivElement>()
-const onHover = () => {
-  achievementDetails.value?.classList.add('achievement-card_content-container_active')
-}
-const onOut = () => {
-  achievementDetails.value?.classList.remove('achievement-card_content-container_active')
-}
 
 </script>
 
 <template>
   <div class="achievement-card_container">
     <div class="achievement-card_wrapper">
-      <div class="achievement-card_square" @mouseover="onHover" @mouseout="onOut">
+      <div class="achievement-card_square" @click="$emit('changeActiveAchievement', achievement.Name)">
         <div class="achievement-card_square-content-wrapper">
           <img :src="achievement.Image" :alt="achievement.Name">
         </div>
       </div>
-      <div ref="achievementDetails" class="achievement-card_content-container">
+      <div class="achievement-card_content-container" :class="{'achievement-card_content-container_active': isActive}">
         <span>{{ achievement.Name }}</span>
         <span>{{ achievement.Date }}</span>
         <span>{{ achievement.Description }}</span>
@@ -78,6 +71,7 @@ img {
     border-radius: 5px;
     padding: 8px;
     z-index: 2;
+    cursor: pointer;
   }
 
   &_square-content-wrapper {

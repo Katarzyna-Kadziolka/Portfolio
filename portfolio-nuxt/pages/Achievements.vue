@@ -2,12 +2,24 @@
 import {achievements} from "~/data/achievements";
 import AchievementCard from "~/components/features/achievements/AchievementCard.vue";
 
+const activeAchievementsName = ref("");
+const onChangeActiveAchievement = (activeName: string) => {
+  if(activeName === activeAchievementsName.value) {
+    activeAchievementsName.value = "";
+  }
+  else {
+    activeAchievementsName.value = activeName
+  }
+}
+
 </script>
 
 <template>
   <div class="achievements_wrapper">
     <div class="achievements_container">
-      <AchievementCard v-for="achievement in achievements" :achievement="achievement" :key="achievement"/>
+      <AchievementCard v-for="achievement in achievements" :achievement="achievement" :key="achievement"
+                       @changeActiveAchievement="onChangeActiveAchievement"
+                       :is-active="achievement.Name === activeAchievementsName"/>
     </div>
   </div>
 </template>
@@ -22,6 +34,7 @@ import AchievementCard from "~/components/features/achievements/AchievementCard.
     align-self: center;
     height: 85vh;
   }
+
   &_container {
     display: grid;
     justify-content: center;
@@ -29,6 +42,7 @@ import AchievementCard from "~/components/features/achievements/AchievementCard.
     grid-template-columns: repeat(4, 9vw);
     grid-template-rows: repeat(3, 9vw);
     grid-gap: 10px;
+
     :nth-child(1) {
       grid-row: 1;
       grid-column: 1;
