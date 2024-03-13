@@ -11,7 +11,7 @@ defineProps<{
 <template>
   <div class="achievement-card_container">
     <div class="achievement-card_wrapper">
-      <div class="achievement-card_square" @click="$emit('changeActiveAchievement', achievement.Name)">
+      <div class="achievement-card_square" @click="$emit('changeActiveAchievement', achievement.Name)" :class="{'achievement-card_square_active': isActive}">
         <div class="achievement-card_square-content-wrapper">
           <img :src="achievement.Image" :alt="achievement.Name">
         </div>
@@ -53,7 +53,7 @@ img {
       height: 10vw;
       background: $nav-primary;
       margin-left: -5vw;
-      z-index: 1;
+      z-index: 3;
       padding: 16px 16px 16px 8vw;
       border-radius: 15px;
     }
@@ -72,6 +72,9 @@ img {
     padding: 8px;
     z-index: 2;
     cursor: pointer;
+    &_active {
+      z-index: 4;
+    }
   }
 
   &_square-content-wrapper {
