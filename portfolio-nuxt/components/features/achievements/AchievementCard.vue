@@ -11,15 +11,19 @@ defineProps<{
 <template>
   <div class="achievement-card_container">
     <div class="achievement-card_wrapper">
-      <div class="achievement-card_square" @click="$emit('changeActiveAchievement', achievement.Name)" :class="{'achievement-card_square_active': isActive}">
+      <div class="achievement-card_square" @click="$emit('changeActiveAchievement', achievement.Name)"
+           :class="{'achievement-card_square_active': isActive}">
         <div class="achievement-card_square-content-wrapper">
           <img :src="achievement.Image" :alt="achievement.Name">
         </div>
       </div>
       <div class="achievement-card_content-container" :class="{'achievement-card_content-container_active': isActive}">
-        <span>{{ achievement.Name }}</span>
-        <span>{{ achievement.Date }}</span>
-        <span>{{ achievement.Description }}</span>
+        <div class="achievement-card_header">
+          <span class="achievement-card_title"><b>{{ achievement.Name }}</b></span>
+          <span>{{ achievement.Date }}</span>
+        </div>
+        <hr>
+        <span class="achievement-card_description">{{ achievement.Description }}</span>
       </div>
     </div>
   </div>
@@ -30,12 +34,15 @@ img {
   width: 8vw;
   height: 8vw;
 }
-
+hr {
+  width: 100%;
+}
 .achievement-card {
   &_container {
     display: flex;
     align-items: center;
   }
+
   &_wrapper {
     display: flex;
     align-items: center;
@@ -72,6 +79,7 @@ img {
     padding: 8px;
     z-index: 2;
     cursor: pointer;
+
     &_active {
       z-index: 4;
     }
@@ -79,6 +87,19 @@ img {
 
   &_square-content-wrapper {
     transform: rotate(-45deg);
+  }
+
+  &_title {
+    font-size: 1.2rem;
+  }
+
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &_description {
+    padding-top: 4px;
   }
 }
 </style>
