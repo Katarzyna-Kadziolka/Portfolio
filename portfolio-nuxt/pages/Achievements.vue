@@ -19,7 +19,7 @@ const onChangeActiveAchievement = (activeName: string) => {
     <div class="achievements_container">
       <AchievementCard v-for="achievement in achievements" :achievement="achievement" :key="achievement"
                        @changeActiveAchievement="onChangeActiveAchievement"
-                       :is-active="achievement.Name === activeAchievementsName"/>
+                       :is-active="achievement.Name === activeAchievementsName" />
     </div>
   </div>
 </template>
