@@ -37,15 +37,17 @@ const onCardClicked = () => {
           <img :src="achievement.Image" :alt="achievement.Name">
         </div>
       </div>
-      <div class="achievement-card_content-container"
-           :class="{'achievement-card_content-container_active': isActive, 'achievement-card_content-container_active_overflow': isOverflow}">
-        <div class="achievement-card_header">
-          <span class="achievement-card_title"><b>{{ achievement.Name }}</b></span>
-          <span>{{ achievement.Date }}</span>
+      <Transition appear>
+        <div v-show="isActive" class="achievement-card_content-container"
+             :class="{'achievement-card_content-container_active': isActive, 'achievement-card_content-container_active_overflow': isOverflow}">
+          <div class="achievement-card_header">
+            <span class="achievement-card_title"><b>{{ achievement.Name }}</b></span>
+            <span>{{ achievement.Date }}</span>
+          </div>
+          <hr>
+          <span class="achievement-card_description">{{ achievement.Description }}</span>
         </div>
-        <hr>
-        <span class="achievement-card_description">{{ achievement.Description }}</span>
-      </div>
+      </Transition>
     </div>
   </div>
 </template>
@@ -59,6 +61,18 @@ img {
 hr {
   width: 100%;
   height: 0;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: max-width .5s;
+  max-width: 500px;
+  overflow: auto;
+}
+
+.v-enter-from,
+.v-leave-to {
+  max-width: 0px;
 }
 
 .achievement-card {
@@ -75,7 +89,6 @@ hr {
 
   &_content-container {
     display: none;
-
     &_active {
       display: flex;
       flex-wrap: wrap;
