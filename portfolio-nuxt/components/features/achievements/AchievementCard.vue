@@ -91,7 +91,8 @@ hr {
       overflow-x: hidden;
 
       &_overflow {
-        margin-left: -50vw;
+        margin-left: -45vw;
+        padding: 16px 8vw 16px 16px;
       }
     }
   }
