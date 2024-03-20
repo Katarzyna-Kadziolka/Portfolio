@@ -7,10 +7,9 @@ const props = defineProps<{
   isActive: boolean
 }>()
 const isOverflow = ref(false)
-const check = ref(Math.ceil(Math.random() * 10))
 
 watch(() => props.isActive, (newValue) => {
-  if(!newValue) {
+  if (!newValue) {
     isOverflow.value = false;
   }
 })
@@ -21,9 +20,13 @@ const emit = defineEmits<{
 
 const onCardClicked = () => {
   emit("changeActiveAchievement", props.achievement.Name);
+  document.body.style.overflowX = "hidden";
   nextTick(() => {
     isOverflow.value = document.body.scrollWidth > document.body.offsetWidth
   })
+  setTimeout(() => {
+    document.body.style.overflowX = "auto";
+  }, 500)
 }
 
 </script>
@@ -38,8 +41,8 @@ const onCardClicked = () => {
         </div>
       </div>
       <Transition appear>
-        <div v-show="isActive" class="achievement-card_content-container"
-             :class="{'achievement-card_content-container_active': isActive, 'achievement-card_content-container_active_overflow': isOverflow}">
+        <div v-if="isActive" class="achievement-card_content-container"
+             :class="{'achievement-card_content-container_overflow': isOverflow}">
           <div class="achievement-card_header">
             <span class="achievement-card_title"><b>{{ achievement.Name }}</b></span>
             <span>{{ achievement.Date }}</span>
@@ -63,16 +66,17 @@ hr {
   height: 0;
 }
 
-.v-enter-active,
-.v-leave-active {
-  transition: max-width .5s;
-  max-width: 500px;
-  overflow: auto;
+.v-enter-active {
+  transition: all .3s ease;
 }
 
-.v-enter-from,
-.v-leave-to {
-  max-width: 0px;
+.v-leave-active {
+  opacity: 100;
+}
+
+.v-enter-from {
+  transform: translateX(-25%);
+  opacity: 0;
 }
 
 .achievement-card {
@@ -88,25 +92,22 @@ hr {
   }
 
   &_content-container {
-    display: none;
-    &_active {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      width: 30vw;
-      height: 10vw;
-      background: $nav-primary;
-      margin-left: -5vw;
-      z-index: 3;
-      padding: 16px 16px 16px 8vw;
-      border-radius: 15px;
-      overflow-y: auto;
-      overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 30vw;
+    height: 10vw;
+    background: $nav-primary;
+    margin-left: -5vw;
+    z-index: 3;
+    padding: 16px 16px 16px 8vw;
+    border-radius: 15px;
+    overflow-y: auto;
+    overflow-x: hidden;
 
-      &_overflow {
-        margin-left: -45vw;
-        padding: 16px 8vw 16px 16px;
-      }
+    &_overflow {
+      margin-left: -45vw;
+      padding: 16px 8vw 16px 16px;
     }
   }
 
