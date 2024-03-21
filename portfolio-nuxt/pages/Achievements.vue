@@ -30,9 +30,12 @@ const onChangeActiveAchievement = (activeName: string) => {
     display: flex;
     justify-content: center;
     align-items: center;
-    align-content: center;
-    align-self: center;
     height: 85vh;
+    @media (max-width: 768px) {
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 32px;
+    }
   }
 
   &_container {
@@ -66,6 +69,11 @@ const onChangeActiveAchievement = (activeName: string) => {
     :nth-child(5) {
       grid-row: 3;
       grid-column: 3;
+    }
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      row-gap: 32px;
     }
   }
 }
