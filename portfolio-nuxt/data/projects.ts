@@ -125,7 +125,7 @@ export const projects : Project[] = [
         Description: "After two years of intensive study, I decided to return to Cthulhu Wizard Creator. This time it is a much more extensive web project, enriched with many new features. Still in progress :)",
         ImagePath: cthulhuWizard,
         MiniImagePath: cthulhuWizardMini,
-        Technologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.Cqrs, Technology.RavenDb, Technology.NoSql, Technology.Docker, Technology.TypeScript, Technology.Vue, Technology.Html, Technology.Scss, Technology.Quasar, Technology.AtomicDesign, Technology.Heroku, Technology.Git, Technology.Rider, Technology.WebStorm],
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.Cqrs, Technology.RavenDb, Technology.NoSql, Technology.Docker, Technology.TypeScript, Technology.Vue, Technology.Html, Technology.Scss, Technology.Quasar, Technology.Heroku, Technology.Git, Technology.Rider, Technology.WebStorm],
         MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.Vue, Technology.TypeScript],
         Github: "https://github.com/Katarzyna-Kadziolka/CthulhuWizardApp",
         Website: "https://cthulhu-wizard.herokuapp.com/wizard"
