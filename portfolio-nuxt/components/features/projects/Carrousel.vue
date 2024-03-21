@@ -64,7 +64,7 @@ const onKeyDown = (event: KeyboardEvent) => {
 <style scoped lang="scss">
 img {
   padding-top: 16px;
-  height: 50vh;
+  height: 40vh;
   object-fit: contain;
   @media (max-width: 768px) {
     padding-top: 0;
@@ -77,6 +77,7 @@ img {
     max-height: 100%;
     display: flex;
     flex-direction: column;
+    overflow: auto;
     @media (max-width: 768px) {
       overflow: auto;
     }
@@ -110,8 +111,11 @@ img {
   &_buttons {
     display: flex;
     justify-content: center;
-    padding: 16px 64px;
+    padding: 0 64px 8px 64px;
     column-gap: 16px;
+    @media (max-width: 768px) {
+      padding-top: 16px;
+    }
   }
   &_button {
     width: 150px;
@@ -125,7 +129,8 @@ img {
   }
   &_nav-button {
     padding: 16px;
-    width: 25px;
+    width: 15px;
+    height: 15px;
   }
   &_exit-button {
     position: absolute;
