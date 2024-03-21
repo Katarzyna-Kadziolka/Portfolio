@@ -1,5 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import BaseTag from "~/components/common/BaseTag.vue";
+</script>
 
 <template>
-  About me
+  <BaseTag></BaseTag>
 </template>

@@ -22,7 +22,7 @@ const props = defineProps<{
       <span>{{description}}</span>
       <hr>
       <div class="gallery-card_tags">
-        <BaseTag v-for="technology in technologies" :label="technology" />
+        <BaseTag v-for="technology in technologies">{{technology}}</BaseTag>
       </div>
     </div>
   </div>

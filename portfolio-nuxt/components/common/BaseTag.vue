@@ -1,12 +1,9 @@
 <script setup lang="ts">
-defineProps<{
-  label: string
-}>()
 </script>
 
 <template>
   <div class="base-tag_container">
-    <span>{{label}}</span>
+    <slot></slot>
   </div>
 </template>
 

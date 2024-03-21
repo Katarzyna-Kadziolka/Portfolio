@@ -52,7 +52,7 @@ const onKeyDown = (event: KeyboardEvent) => {
       <span class="carrousel_description">{{ project.Description }}</span>
     </div>
     <div class="carrousel_tags">
-      <BaseTag v-for="technology in project.Technologies" :label="technology" />
+      <BaseTag v-for="technology in project.Technologies">{{technology}}</BaseTag>
     </div>
     <div class="carrousel_buttons">
       <BaseButton label="Github" class="carrousel_button" @click="goTo(project.Github)" :disabled="false" />
