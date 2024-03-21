@@ -77,7 +77,7 @@ onBeforeUnmount(() => {
     column-gap: 8px;
     position: fixed;
     width: 100vw;
-    z-index: 2;
+    z-index: 100;
     color: $primary;
     flex-direction: row;
     @media(max-width: 768px) {
@@ -121,7 +121,7 @@ onBeforeUnmount(() => {
   }
   &_mobile-menu {
     padding-top: 64px;
-    z-index: 3;
+    z-index: 100;
     background: #1d1d27;
     width: 100%;
     height: 100%;

@@ -98,12 +98,18 @@ hr {
   &_container {
     display: flex;
     align-items: center;
+    @media (max-width: 768px) {
+      margin-top: 5vw;
+    }
   }
 
   &_wrapper {
     display: flex;
     align-items: center;
     position: relative;
+    @media (max-width: 768px) {
+      align-items: flex-start;
+    }
   }
 
   &_content-container {
@@ -119,10 +125,13 @@ hr {
     border-radius: 15px;
     overflow-y: auto;
     overflow-x: hidden;
-
     &_overflow {
       margin-left: -45vw;
       padding: 16px 8vw 16px 16px;
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -139,9 +148,14 @@ hr {
     padding: 8px;
     z-index: 2;
     cursor: pointer;
-
     &_active {
       z-index: 4;
+    }
+    @media (max-width: 768px) {
+      z-index: 4;
+      justify-content: flex-start;
+      height: auto;
+      margin-top: -7vw;
     }
   }
 
@@ -158,6 +172,9 @@ hr {
     justify-content: space-between;
     width: 100%;
     align-items: center;
+    @media (max-width: 768px) {
+      padding-left: 8px;
+    }
   }
 
   &_description {

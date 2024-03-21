@@ -34,7 +34,7 @@ const onChangeActiveAchievement = (activeName: string) => {
     @media (max-width: 768px) {
       justify-content: flex-start;
       align-items: flex-start;
-      padding: 32px;
+      padding: 24px;
     }
   }
 
@@ -74,6 +74,9 @@ const onChangeActiveAchievement = (activeName: string) => {
       display: flex;
       flex-direction: column;
       row-gap: 32px;
+      :nth-child(5) {
+        padding-bottom: 16px;
+      }
     }
   }
 }
