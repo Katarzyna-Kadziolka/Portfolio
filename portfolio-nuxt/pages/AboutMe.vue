@@ -33,7 +33,7 @@ const goTo = (url: string) => {
 <style scoped lang="scss">
 img {
   width: inherit;
-  object-fit: cover;
+  scale: 1.1;
   z-index: 1;
 }
 .about-me {
@@ -50,12 +50,12 @@ img {
     border: 5px solid $primary;
     border-radius: 50%;
     background: $nav-primary;
-    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
     overflow: hidden;
     z-index: 2;
+    object-fit: cover;
   }
   &_bella {
     width: 15vw;
