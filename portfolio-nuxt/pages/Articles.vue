@@ -6,7 +6,7 @@ import {articles} from "~/data/articles";
 
 <template>
   <div class="articles_container">
-    <Article v-for="article in articles" :article="article" :key="article" />
+    <Article class="articles_article" v-for="article in articles" :article="article" :key="article" />
   </div>
 </template>
 
@@ -16,6 +16,11 @@ import {articles} from "~/data/articles";
     padding: 3rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+  }
+  &_article {
+    width: 50vw;
   }
 }
 </style>

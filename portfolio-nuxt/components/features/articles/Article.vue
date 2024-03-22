@@ -10,7 +10,7 @@ defineProps<{
 <template>
   <div class="article_container">
     <span>{{article.Date}}</span>
-    <span>{{article.Title}}</span>
+    <span class="article_title">{{article.Title}}</span>
     <div class="article_content">
       <div class="article_description">
         {{article.Description}}
@@ -27,28 +27,44 @@ defineProps<{
 
 <style scoped lang="scss">
 img {
-  height: 10vh
+  max-height: 8vh;
 }
 .article {
   &_container {
     display: flex;
     flex-direction: column;
     border: 2px solid $primary;
+    border-radius: 8px;
+    padding: 1rem;
+    row-gap: 0.5rem;
+    background: $nav-primary;
   }
   &_content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 60vw;
+    grid-template-columns: 1fr auto;
+    column-gap: 1rem;
+    :nth-child(2) {
+      justify-self: center;
+      align-self: center;
+    }
   }
   &_buttons {
     display: flex;
+    padding-top: 0.5rem;
+    justify-content: flex-end;
+    column-gap: 1rem;
+    align-items: center;
   }
   &_description {
+    font-size: 1.2rem;
     width: 100%;
     overflow: hidden;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     display: -webkit-box;
+  }
+  &_title {
+    font-size: 2rem;
   }
 }
 </style>
