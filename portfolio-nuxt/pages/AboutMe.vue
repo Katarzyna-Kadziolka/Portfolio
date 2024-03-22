@@ -39,7 +39,6 @@ img {
 .about-me {
   &_container {
     padding: 8px 32px;
-    height: 80vh;
   }
   &_socials {
     display: flex;
@@ -72,15 +71,10 @@ img {
     position: relative;
     display: flex;
     align-items: stretch;
-    height: 100%;
-    background: #3DAA11;
-    border: 2px solid red;
   }
   &_content-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
   }
 }
 </style>
