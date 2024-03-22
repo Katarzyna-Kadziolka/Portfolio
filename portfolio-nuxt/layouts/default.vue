@@ -42,6 +42,7 @@ onBeforeUnmount(() => {
       <NavButton label="Experience" icon="fa-solid fa-briefcase" link="/Experience" :class="[route.path === '/Experience' ? 'default_active' : '']"/>
       <NavButton label="Projects" icon="fa-solid fa-laptop-code" link="/Projects" :class="[route.path === '/Projects' ? 'default_active' : '']"/>
       <NavButton label="Achievements" icon="fa-solid fa-star" link="/Achievements" :class="[route.path === '/Achievements' ? 'default_active' : '']"/>
+      <NavButton label="Articles" icon="fa-solid fa-newspaper" link="/Articles" :class="[route.path === '/Articles' ? 'default_active' : '']"/>
       <NavButton label="Certificates" icon="fa-solid fa-book" link="/Certificates" :class="[route.path === '/Certificates' ? 'default_active' : '']"/>
       <NavButton label="Timeline" icon="fa-solid fa-timeline" link="/TimeLine" :class="[route.path === '/TimeLine' ? 'default_active' : '']"/>
     </div>
@@ -57,6 +58,7 @@ onBeforeUnmount(() => {
     <NavButton label="Experience" icon="fa-solid fa-briefcase" link="/Experience" :class="[route.path === '/Experience' ? 'default_active' : '']"/>
     <NavButton label="Projects" icon="fa-solid fa-laptop-code" link="/Projects" :class="[route.path === '/Projects' ? 'default_active' : '']"/>
     <NavButton label="Achievements" icon="fa-solid fa-star" link="/Achievements" :class="[route.path === '/Achievements' ? 'default_active' : '']"/>
+    <NavButton label="Articles" icon="fa-solid fa-newspaper" link="/Articles" :class="[route.path === '/Articles' ? 'default_active' : '']"/>
     <NavButton label="Certificates" icon="fa-solid fa-book" link="/Certificates" :class="[route.path === '/Certificates' ? 'default_active' : '']"/>
     <NavButton label="Timeline" icon="fa-solid fa-timeline" link="/TimeLine" :class="[route.path === '/TimeLine' ? 'default_active' : '']"/>
   </div>

@@ -13,6 +13,7 @@ import {
     faAngleUp,
     faAngleDown,
     faXmark,
+    faNewspaper
 } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 
@@ -35,6 +36,7 @@ library.add(faAngleDown)
 library.add(faXmark)
 library.add(faLinkedinIn)
 library.add(faGithub)
+library.add(faNewspaper)
 export default defineNuxtPlugin((nuxtApp) => {
     nuxtApp.vueApp.component('font-awesome-icon', FontAwesomeIcon)
 })
