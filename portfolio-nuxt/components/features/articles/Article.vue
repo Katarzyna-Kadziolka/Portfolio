@@ -5,6 +5,10 @@ import BaseButton from "~/components/common/BaseButton.vue";
 defineProps<{
   article: Article
 }>()
+
+const goTo = (url: string) => {
+  window.open(url, '_blank');
+}
 </script>
 
 <template>
@@ -19,8 +23,8 @@ defineProps<{
     </div>
     <div class="article_buttons">
       <span>Read more:</span>
-      <BaseButton label="Bulldogjob" />
-      <BaseButton label="Medium" />
+      <BaseButton label="Bulldogjob" @click="goTo(article.BulldogjobUrl)" />
+      <BaseButton label="Medium" @click="goTo(article.MediumUrl)"/>
     </div>
   </div>
 </template>
