@@ -52,22 +52,30 @@ img {
     border: 5px solid $primary;
     border-radius: 50%;
     background: $nav-primary;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     overflow: hidden;
     z-index: 2;
     object-fit: cover;
+    @media (max-width: 768px) {
+      width: 50vw;
+    }
   }
   &_bella {
     width: 15vw;
     overflow: hidden;
-    position: absolute;
-    top: 15vw;
-    left: 15vw;
+    position: relative;
+    top: -5vw;
+    left: 14vw;
     border: 3px solid $primary;
     border-radius: 50%;
     z-index: 1;
+    @media (max-width: 768px) {
+      width: 40vw;
+      top: -10vw;
+      left: 30vw;
+    }
   }
   &_photo-container {
     position: relative;
@@ -78,6 +86,10 @@ img {
     column-gap: 2rem;
     padding-right: 2rem;
     height: 100%;
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      padding-right: 0;
+    }
   }
   &_title {
     font-size: 3rem;
@@ -92,6 +104,9 @@ img {
     text-align: justify;
     height: 100%;
     justify-content: center;
+    @media (max-width: 768px) {
+      padding-bottom: 2rem;
+    }
   }
 }
 </style>
