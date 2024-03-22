@@ -26,7 +26,7 @@ const showMore = ref<boolean>(false);
           <img :src="experience.Image" :alt="experience.CompanyName">
         </div>
         <div class="experience-card_tags">
-          <BaseTag v-for="technology in experience.Technologies" :label="technology"/>
+          <BaseTag v-for="technology in experience.Technologies">{{technology}}</BaseTag>
         </div>
       </div>
     </Transition>
