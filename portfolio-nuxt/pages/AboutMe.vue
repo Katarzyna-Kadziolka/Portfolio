@@ -21,8 +21,9 @@ const goTo = (url: string) => {
           <img src="~/assets/images/Bella.png" alt="Bella">
         </div>
       </div>
-      <div>
-        Test
+      <div class="about-me_text-container">
+        <span class="about-me_title">Hello world!</span>
+        <span class="about-me_description">I started programming in 2019 and since then it has become my passion. My strongest point is programming in .Net. I do well in Vue. I know the basics of Flutter, Angular and Python. I can develop web, desktop and mobile applications, as well as database design. I am happy to share my code on GitHub. I like to learn in my free time and develop projects that help me in everyday life. I care about details and I can independently plan the implementation of tasks entrusted to me.</span>
       </div>
     </div>
 
@@ -39,6 +40,7 @@ img {
 .about-me {
   &_container {
     padding: 8px 32px;
+    height: 80vh;
   }
   &_socials {
     display: flex;
@@ -69,12 +71,27 @@ img {
   }
   &_photo-container {
     position: relative;
-    display: flex;
-    align-items: stretch;
   }
   &_content-container {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+    padding-right: 2rem;
+    height: 100%;
+  }
+  &_title {
+    font-size: 3rem;
+  }
+  &_description {
+    font-size: 1.5rem;
+  }
+  &_text-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    text-align: justify;
+    height: 100%;
+    justify-content: center;
   }
 }
 </style>
