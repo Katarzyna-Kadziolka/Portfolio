@@ -31,7 +31,7 @@ const goTo = (url: string) => {
 
 <style scoped lang="scss">
 img {
-  max-height: 8vh;
+  max-height: 4rem;
 }
 .article {
   &_container {
