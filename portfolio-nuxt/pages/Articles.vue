@@ -18,9 +18,16 @@ import {articles} from "~/data/articles";
     flex-direction: column;
     align-items: center;
     row-gap: 2rem;
+    @media (max-width: 768px) {
+      padding-top: 2rem;
+
+    }
   }
   &_article {
     width: 50vw;
+    @media (max-width: 768px) {
+      width: auto;
+    }
   }
 }
 </style>

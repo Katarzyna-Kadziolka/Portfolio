@@ -9,18 +9,36 @@ defineProps<{
 const goTo = (url: string) => {
   window.open(url, '_blank');
 }
+const isMobile = ref(false);
+let mql:  MediaQueryList
+const handleMqlChange = (e:  MediaQueryListEvent) => {
+  isMobile.value = e.matches
+}
+onMounted(() => {
+  mql = window.matchMedia('(max-width: 768px)')
+  isMobile.value = mql.matches
+  mql.addEventListener('change', handleMqlChange)
+})
+
+onUnmounted(() => {
+  mql.removeEventListener('change', handleMqlChange)
+})
+
 </script>
 
 <template>
   <div class="article_container">
     <span>{{article.Date}}</span>
-    <span class="article_title">{{article.Title}}</span>
-    <div class="article_content">
-      <div class="article_description">
-        {{article.Description}}
+    <div class="article_mobile-content">
+      <span class="article_title">{{article.Title}}</span>
+      <div class="article_content">
+        <div class="article_description" v-if="!isMobile">
+          {{article.Description}}
+        </div>
+        <img :src="article.PhotoUrl" :alt="article.Title">
       </div>
-      <img :src="article.PhotoUrl" :alt="article.Title">
     </div>
+
     <div class="article_buttons">
       <span>Read more:</span>
       <BaseButton label="Bulldogjob" @click="goTo(article.BulldogjobUrl)" />
@@ -32,6 +50,9 @@ const goTo = (url: string) => {
 <style scoped lang="scss">
 img {
   max-height: 4rem;
+  @media (max-width: 768px) {
+    max-width: 3rem;
+  }
 }
 .article {
   &_container {
@@ -51,6 +72,9 @@ img {
       justify-self: center;
       align-self: center;
     }
+    @media (max-width: 768px) {
+      align-items: center;
+    }
   }
   &_buttons {
     display: flex;
@@ -69,6 +93,15 @@ img {
   }
   &_title {
     font-size: 2rem;
+    font-weight: bold;
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
+    }
+  }
+  &_mobile-content {
+    @media (max-width: 768px) {
+      display: flex;
+    }
   }
 }
 </style>
