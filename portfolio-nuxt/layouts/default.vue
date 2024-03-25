@@ -44,7 +44,6 @@ onBeforeUnmount(() => {
       <NavButton label="Achievements" icon="fa-solid fa-star" link="/Achievements" :class="[route.path === '/Achievements' ? 'default_active' : '']"/>
       <NavButton label="Articles" icon="fa-solid fa-newspaper" link="/Articles" :class="[route.path === '/Articles' ? 'default_active' : '']"/>
       <NavButton label="Certificates" icon="fa-solid fa-book" link="/Certificates" :class="[route.path === '/Certificates' ? 'default_active' : '']"/>
-      <NavButton label="Timeline" icon="fa-solid fa-timeline" link="/TimeLine" :class="[route.path === '/TimeLine' ? 'default_active' : '']"/>
     </div>
 
     <div class="default_buttons" v-else>
@@ -60,7 +59,6 @@ onBeforeUnmount(() => {
     <NavButton label="Achievements" icon="fa-solid fa-star" link="/Achievements" :class="[route.path === '/Achievements' ? 'default_active' : '']"/>
     <NavButton label="Articles" icon="fa-solid fa-newspaper" link="/Articles" :class="[route.path === '/Articles' ? 'default_active' : '']"/>
     <NavButton label="Certificates" icon="fa-solid fa-book" link="/Certificates" :class="[route.path === '/Certificates' ? 'default_active' : '']"/>
-    <NavButton label="Timeline" icon="fa-solid fa-timeline" link="/TimeLine" :class="[route.path === '/TimeLine' ? 'default_active' : '']"/>
   </div>
   <div v-show="!showMobileMenu" class="default_slot">
     <slot/>

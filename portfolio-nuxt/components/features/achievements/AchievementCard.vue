@@ -133,6 +133,19 @@ hr {
       width: 100%;
       height: 100%;
     }
+    &::-webkit-scrollbar {
+      width: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px #1d1d27;
+      background: $nav-primary;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $nav-secondary;
+      border-radius: 8px;
+    }
   }
 
   &_square {
