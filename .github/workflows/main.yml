@@ -19,7 +19,7 @@ jobs:
           node-version: "20"
       # Pick your own package manager and build script
       - run: npm install
-      - run: nuxi generate
+      - run: npx nuxi generate
       - name: Get directory
         run: ls -a
       - name: Add nojekyll
