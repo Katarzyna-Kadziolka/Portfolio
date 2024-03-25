@@ -22,6 +22,8 @@ jobs:
       - run: npx nuxt build --preset github_pages
       - name: Get directory
         run: ls -a
+      - name: Add nojekyll
+        run: touch ./.output/public/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
