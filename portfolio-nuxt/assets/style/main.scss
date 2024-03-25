@@ -1,0 +1,26 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito", serif;
+  color: #FFEDE6;
+  background: #1d1d27;
+  position: relative;
+}
+dialog {
+  padding: 0;
+  margin: 0;
+  color: #FFEDE6;
+}
+body::-webkit-scrollbar {
+  width: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px #1d1d27;
+  background: $nav-primary;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $nav-secondary;
+  border-radius: 8px;
+}
