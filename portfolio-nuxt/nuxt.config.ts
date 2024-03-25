@@ -26,7 +26,9 @@ export default defineNuxtConfig({
     app: {
         head: {
             title: 'Katarzyna Kądziołka'
-        }
+        },
+        baseURL: '/Portfolio/',
+        buildAssetsDir: 'assets',
     },
     build: {
         transpile: [
