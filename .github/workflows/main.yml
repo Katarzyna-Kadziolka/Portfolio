@@ -7,9 +7,6 @@ on:
       - main
 jobs:
   build:
-    defaults:
-      run:
-        working-directory: ./portfolio-nuxt
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -20,10 +17,12 @@ jobs:
       # Pick your own package manager and build script
       - run: npm install
       - run: npx nuxt build --preset github_pages
+      - name: Get directory
+        run: ls
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./.output/public
+          path: ./portfolio-nuxt/.output/public
   # Deployment job
   deploy:
     # Add a dependency to the build job
