@@ -9,6 +9,7 @@ const goTo = (url: string) => {
 <template>
   <div class="about-me_container">
     <div class="about-me_socials">
+      <Social icon="fa-solid fa-newspaper" @click="goTo('https://chihuahuacoder.com/?source=top_nav_blog_home')"/>
       <Social icon="fa-brands fa-linkedin-in" @click="goTo('https://www.linkedin.com/in/katarzyna-k%C4%85dzio%C5%82ka-7610a6201/')"/>
       <Social icon="fa-brands fa-github" @click="goTo('https://github.com/Katarzyna-Kadziolka')"/>
     </div>
