@@ -38,12 +38,12 @@ onBeforeUnmount(() => {
       <div class="default_title">Katarzyna Kądziołka</div>
     </div>
     <div class="default_buttons" v-if="!isMobile" >
-      <NavButton label="About me" icon="fa-solid fa-user" link="/" :class="[route.path === '/' ? 'default_active' : '']"/>
-      <NavButton label="Experience" icon="fa-solid fa-briefcase" link="/Experience" :class="[route.path === '/Experience' ? 'default_active' : '']"/>
-      <NavButton label="Projects" icon="fa-solid fa-laptop-code" link="/Projects" :class="[route.path === '/Projects' ? 'default_active' : '']"/>
-      <NavButton label="Achievements" icon="fa-solid fa-star" link="/Achievements" :class="[route.path === '/Achievements' ? 'default_active' : '']"/>
-      <NavButton label="Articles" icon="fa-solid fa-newspaper" link="/Articles" :class="[route.path === '/Articles' ? 'default_active' : '']"/>
-      <NavButton label="Certificates" icon="fa-solid fa-book" link="/Certificates" :class="[route.path === '/Certificates' ? 'default_active' : '']"/>
+      <NavButton label="About me" icon="fa-solid fa-user" link="/" :class="[route.path === '/' ? 'default_active' : '']" :redirect-to-new-window=false />
+      <NavButton label="Experience" icon="fa-solid fa-briefcase" link="/Experience" :class="[route.path === '/Experience' ? 'default_active' : '']" :redirect-to-new-window=false />
+      <NavButton label="Projects" icon="fa-solid fa-laptop-code" link="/Projects" :class="[route.path === '/Projects' ? 'default_active' : '']" :redirect-to-new-window=false />
+      <NavButton label="Achievements" icon="fa-solid fa-star" link="/Achievements" :class="[route.path === '/Achievements' ? 'default_active' : '']" :redirect-to-new-window=false />
+      <NavButton label="Articles" icon="fa-solid fa-newspaper" link="https://chihuahuacoder.com/?source=top_nav_blog_home" :redirect-to-new-window=true />
+      <NavButton label="Certificates" icon="fa-solid fa-book" link="/Certificates" :class="[route.path === '/Certificates' ? 'default_active' : '']" :redirect-to-new-window=false />
     </div>
 
     <div class="default_buttons" v-else>
@@ -53,12 +53,12 @@ onBeforeUnmount(() => {
     </div>
   </div>
   <div v-if="showMobileMenu && isMobile" class="default_mobile-menu">
-    <NavButton label="About me" icon="fa-solid fa-user" link="/" :class="[route.path === '/' ? 'default_active' : '']"/>
-    <NavButton label="Experience" icon="fa-solid fa-briefcase" link="/Experience" :class="[route.path === '/Experience' ? 'default_active' : '']"/>
-    <NavButton label="Projects" icon="fa-solid fa-laptop-code" link="/Projects" :class="[route.path === '/Projects' ? 'default_active' : '']"/>
-    <NavButton label="Achievements" icon="fa-solid fa-star" link="/Achievements" :class="[route.path === '/Achievements' ? 'default_active' : '']"/>
-    <NavButton label="Articles" icon="fa-solid fa-newspaper" link="/Articles" :class="[route.path === '/Articles' ? 'default_active' : '']"/>
-    <NavButton label="Certificates" icon="fa-solid fa-book" link="/Certificates" :class="[route.path === '/Certificates' ? 'default_active' : '']"/>
+    <NavButton label="About me" icon="fa-solid fa-user" link="/" :class="[route.path === '/' ? 'default_active' : '']" :redirect-to-new-window=false />
+    <NavButton label="Experience" icon="fa-solid fa-briefcase" link="/Experience" :class="[route.path === '/Experience' ? 'default_active' : '']" :redirect-to-new-window=false />
+    <NavButton label="Projects" icon="fa-solid fa-laptop-code" link="/Projects" :class="[route.path === '/Projects' ? 'default_active' : '']" :redirect-to-new-window=false />
+    <NavButton label="Achievements" icon="fa-solid fa-star" link="/Achievements" :class="[route.path === '/Achievements' ? 'default_active' : '']" :redirect-to-new-window=false />
+    <NavButton label="Articles" icon="fa-solid fa-newspaper" link="https://chihuahuacoder.com/?source=top_nav_blog_home" :redirect-to-new-window=false />
+    <NavButton label="Certificates" icon="fa-solid fa-book" link="/Certificates" :class="[route.path === '/Certificates' ? 'default_active' : '']" :redirect-to-new-window=false />
   </div>
   <div v-show="!showMobileMenu" class="default_slot">
     <slot/>

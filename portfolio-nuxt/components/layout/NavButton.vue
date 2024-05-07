@@ -1,16 +1,22 @@
 <script setup lang="ts">
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
-defineProps<{
+const props = defineProps<{
   label: string,
   icon: string,
-  link: string
+  link: string,
+  redirectToNewWindow: boolean
 }>()
+
+const target = computed(() => {
+  if(props.redirectToNewWindow) return "_blank"
+  return  ""
+})
 </script>
 
 <template>
   <div class="nav-button_container">
-    <NuxtLink class="nav-button_link" :to="link">
+    <NuxtLink class="nav-button_link" :to="link" :target="target">
       <FontAwesomeIcon :icon=icon />
       <span>{{ label }}</span>
     </NuxtLink>
