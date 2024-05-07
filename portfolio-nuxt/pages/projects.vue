@@ -10,15 +10,15 @@ import {Project} from "~/types/project";
 
 const filters: TechnologyFilter[] = reactive([
   {
-    Technology: Technology.Csharp,
-    IsChecked: false
-  },
-  {
-    Technology: Technology.Vue,
-    IsChecked: false
-  },
-  {
     Technology: Technology.Angular,
+    IsChecked: false
+  },
+  {
+    Technology: Technology.Blazor,
+    IsChecked: false
+  },
+  {
+    Technology: Technology.Csharp,
     IsChecked: false
   },
   {
@@ -26,7 +26,15 @@ const filters: TechnologyFilter[] = reactive([
     IsChecked: false
   },
   {
+    Technology: Technology.Nuxt,
+    IsChecked: false
+  },
+  {
     Technology: Technology.Python,
+    IsChecked: false
+  },
+  {
+    Technology: Technology.Vue,
     IsChecked: false
   },
 ]);
