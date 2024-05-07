@@ -43,9 +43,36 @@ import chronosMini from "~/assets/images/chronosMini.png";
 import cerebri from "~/assets/images/cerebri.png";
 import cthulhuCreator from "~/assets/images/cthulhuCreator.png";
 import cthulhuCreatorMini from "~/assets/images/cthulhuCreatorMini.png";
-
+import portfolioNuxt from "~/assets/images/portfolioNuxt.png";
+import portfolioNuxtMini from "~/assets/images/portfolioNuxtMini.png";
+import overflower from "~/assets/images/overflower.png";
+import overflowerMini from "~/assets/images/overflowerMini.png";
 
 export const projects : Project[] = [
+    {
+        Name: "Overflower",
+        Dates: "03.2024-04.2024",
+        ShortDescription: "API returning tag data from StackOverflow.",
+        Description: "An application in which I set myself the goal of creating the best possible architecture for the REST API. It communicates with the StackOverflow API and returns tag data.",
+        ImagePath: overflower,
+        MiniImagePath: overflowerMini,
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.Cqrs, Technology.Docker, Technology.Rider],
+        MainTechnologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet],
+        Github: "https://github.com/Katarzyna-Kadziolka/Overflower",
+        Website: undefined
+    },
+    {
+        Name: "Portfolio",
+        Dates: "10.2023-03.2024",
+        ShortDescription: "New porftolio created with Nuxt.",
+        Description: "After a few years, I decided it was time to refresh my portfolio :) This time I used Nuxt. Feel free to browse further!",
+        ImagePath: portfolioNuxt,
+        MiniImagePath: portfolioNuxtMini,
+        Technologies: [Technology.Nuxt, Technology.TypeScript, Technology.Html, Technology.Scss, Technology.Git, Technology.WebStorm],
+        MainTechnologies: [Technology.Nuxt, Technology.TypeScript],
+        Github: "https://github.com/Katarzyna-Kadziolka/Portfolio",
+        Website: "https://katarzyna-kadziolka.github.io/Portfolio/"
+    },
     {
         Name: "Doskvol Tools",
         Dates: "09.2023-09.2023",
