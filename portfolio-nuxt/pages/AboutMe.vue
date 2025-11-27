@@ -24,7 +24,7 @@ const goTo = (url: string) => {
       </div>
       <div class="about-me_text-container">
         <span class="about-me_title">Hello world!</span>
-        <span class="about-me_description">I started programming in 2019 and since then it has become my passion. My strongest point is programming in .Net. I do well in Vue. I know the basics of Flutter, Angular and Python. I can develop web, desktop and mobile applications, as well as database design. I am happy to share my code on GitHub. I like to learn in my free time and develop projects that help me in everyday life. I care about details and I can independently plan the implementation of tasks entrusted to me.</span>
+        <span class="about-me_description">I have been programming since 2019 and working professionally since 2021 as a Fullstack Developer. My core technologies include .NET and Vue, and I currently work with .NET, Angular, and Blazor. I share my knowledge and passion for software development through my programming blog, ChihuahuaCoder, where I write about software engineering, practical solutions, and continuous learning. I have taken part in many hackathons, including being a three-time finalist in HackYeah, one of the biggest technology events in Europe. My experience includes rapid prototyping and cross-team collaboration. I am an alumna of Intel’s mentoring program “New Technologies for Girls”, which played an important role in my technical and professional growth. I’m also a co-creator of WizardWorldApi, a project that has surpassed 12 million requests. It is the most popular API returning data from the Harry Potter universe.</span>
       </div>
     </div>
 

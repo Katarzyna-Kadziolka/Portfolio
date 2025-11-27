@@ -48,4 +48,11 @@ export enum Technology {
     EntityFramework = 'Entity Framework',
     UnitTests = 'Unit Tests',
     IntegrationTests = 'IntegrationTests',
+    ApacheKafka = 'Apache Kafka',
+    Elasticsearch = 'Elasticsearch',
+    RabbitMq = 'RabbitMq',
+    Dapper = 'Dapper',
+    Radzer = 'Radzer',
+    Primeng = 'PrimeNG',
+    Hangfire = 'Hangfire',
 }
