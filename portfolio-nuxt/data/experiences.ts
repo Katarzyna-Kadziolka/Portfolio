@@ -3,9 +3,19 @@ import {Technology} from "~/types/technology";
 import codyHydra from "~/assets/images/codeHydra.png";
 import intel from "~/assets/images/intel.svg";
 import oec from "~/assets/images/oec.png";
-import wsei from  "~/assets/images/wsei.png";
+import wsei from "~/assets/images/wsei.png";
+import netland from "~/assets/images/netland.png";
 
 export const experiences: Experience[] = [
+    {
+        CompanyName: "Netland Computers",
+        Dates: "08.2024 - NOW",
+        Description: "At my current role, I'm developing and maintaining a full-scale e-commerce platform, covering both the customer-facing online store and an admin panel for store management and customization. I'm independently designing and implementing full-stack solutions aligned with business requirements, driving feature architecture and development from concept to delivery. On the backend, I'm building core functionality and integrations using technologies such as Elasticsearch, Apache Kafka, Hangfire, and RabbitMQ, while working with raw SQL and optimizing database operations in SQL Server. On the frontend, I'm delivering and maintaining applications using Angular for the storefront and Blazor for the administrative interface, incorporating component libraries like PrimeNG nad Radzen. I'm also managing local development environments using Docker Compose, implementing unit and integration tests, contributing to technical documentation, collaborating effectively with the engineering team, and supporting deployment and releasing processes.",
+        CompanySector: "IT",
+        Position: "Fullstack Developer",
+        Technologies: [Technology.Csharp, Technology.DotNet, Technology.AspNet, Technology.RestApi, Technology.Cqrs, Technology.EntityFramework, Technology.Dapper, Technology.Sql, Technology.SqlServer, Technology.Blazor, Technology.Radzer, Technology.ApacheKafka, Technology.Elasticsearch, Technology.RabbitMq, Technology.Hangfire, Technology.UnitTests, Technology.IntegrationTests, Technology.Angular, Technology.TypeScript, Technology.Html, Technology.Scss, Technology.Primeng, Technology.Docker],
+        Image: netland
+    },
     {
         CompanyName: "Code Hydra",
         Dates: "10.2021 - 12.2023",
